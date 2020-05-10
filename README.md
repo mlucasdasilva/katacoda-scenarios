@@ -13,7 +13,9 @@ For examples, visit https://github.com/katacoda/scenario-example
 
 ## Minhas informações:
 
-Este repositorio foi criado em https://www.katacoda.com/create
+Este repositorio foi criado em https://www.katacoda.com/create   
+--> Sign up to Get Started
+--> Create Profile to Get Started
 
 https://www.katacoda.com/mlucasdasilva
 
