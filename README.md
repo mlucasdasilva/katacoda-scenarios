@@ -10,9 +10,10 @@ Visit https://www.katacoda.com/docs to learn more about creating Katacoda scenar
 For examples, visit https://github.com/katacoda/scenario-example
 
 
+
 ## Minhas informações:
 
-https://www.katacoda.com/create
+Este repositorio foi criado em https://www.katacoda.com/create
 
 https://www.katacoda.com/mlucasdasilva
 
