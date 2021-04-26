@@ -8,7 +8,7 @@
     { "title": "Step 1 - Run a container",
       "text": "step1.md"},
     { "title": "Step 2 - Github",
-      "text": "step2.md"},
+      "text": "step2.md"}
     ],
     "intro": {
       "text": "intro.md",
