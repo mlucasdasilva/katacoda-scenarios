@@ -96,6 +96,34 @@ EOF`{{execute}}
 
 
 
+`cat <<EOF >/opt/docker/builders/minhaweb/index.html
+    <html>
+    <head>
+    <title>ALO VOCE!</title>
+    </head>
+    <body>
+    <p> Alo Voce !!!!! Fala aew !!!  <p/>
+    </body>
+    </html>
+EOF`{{execute}}
+
+
+
+`
+cat <<EOF >/opt/docker/builders/minhaweb/index.html
+    <html>
+    <head>
+    <title>ALO VOCE!</title>
+    </head>
+    <body>
+    <p> Alo Voce !!!!! Fala aew !!!  <p/>
+    </body>
+    </html>
+EOF
+`{{execute}}
+
+
+
 3) Para fazer build
 
 `docker build -t minhaweb .`{{execute}}
