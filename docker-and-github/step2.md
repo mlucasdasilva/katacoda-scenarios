@@ -1,6 +1,8 @@
 Este é o passo 2.
 
-## Tarefa: Construir uma imagem nginx com um arquivo estático índex.html
+## Tarefa:
+
+Construir uma imagem nginx com um arquivo estático índex.html
 
 # Será feito um 'build' de uma imagem docker com nginx
 
@@ -22,15 +24,16 @@ FROM nginx
 ADD index.html /usr/share/nginx/html
 EOF`{{execute}}
 
+
 `cat <<EOF >index.html
-<html>
-<head>
-<title>ALO VOCE!</title>
-</head>
-<body>
-<p> Alo Voce !!!!! Fala aew !!!  <p/>
-</body>
-</html>
+\<html>
+\<head>
+\<title>ALO VOCE!</title>
+\</head>
+\<body>
+\<p> Alo Voce !!!!! Fala aew !!!  <p/>
+\</body>
+\</html>
 EOF`{{execute}}
 
 3) Para fazer build

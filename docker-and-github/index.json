@@ -7,11 +7,11 @@
     "steps": [
     { "title": "Passo 1 - Executar um container",
       "text": "step1.md"},
-    { "title": "Step 4 - Criação de imagem docker",
+    { "title": "Passo 2 - Criação de imagem docker",
       "text": "step2.md"},
-    { "title": "Step 3 - Armazenamento de imagem no docker hub",
+    { "title": "Passo 3 - Armazenamento de imagem no docker hub",
       "text": "step3.md"},
-    { "title": "Step 2 - Github",
+    { "title": "Passo 4 - Github",
       "text": "step4.md"}
     ],
     "intro": {

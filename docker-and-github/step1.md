@@ -1,6 +1,8 @@
 Este é o primeiro passo.
 
-## Tarefa: Execução de comandos básicos docker
+## Tarefa:
+
+Execução de comandos básicos docker
 
 `docker run -d -p 80:80 --name minhaweb nginx`{{execute}}
 
