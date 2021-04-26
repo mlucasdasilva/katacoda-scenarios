@@ -4,17 +4,17 @@ Este é o passo 2.
 
 Este é um exemplo de utilização do github
 
-\1. Crie um repositório no github
+1) Crie um repositório no github
 
 * [docs.github.com](https://docs.github.com/pt/github/creating-cloning-and-archiving-repositories/creating-a-new-repository) - Como criar um repositório no github. Disponível também em lingua portuguesa.
 
-\2. Altere o diretório de trabalho atual referente ao seu projeto local. 
+2) Altere o diretório de trabalho atual referente ao seu projeto local. 
 
 `mkdir minhaweb`{{execute}}
 
 `cd minhaweb`{{execute}}
 
-\3. Inicialize o diretório local como um repositório Git.
+3) Inicialize o diretório local como um repositório Git.
 
 Vamos utilizar o cliente em interface de linha de comando (CLI) git
 
@@ -32,7 +32,7 @@ Para versões anteriores a 2.28.0, use:
 
 `git checkout -b main`{{execute}}
 
-\5. Adicione os arquivos ao novo repositório local. Isso faz stage deles para o primeiro commit.
+4) Adicione os arquivos ao novo repositório local. Isso faz stage deles para o primeiro commit.
 
 Este comando abaixo adiciona os arquivos no repositório local e faz stage deles para commit.
 
@@ -40,7 +40,7 @@ Este comando abaixo adiciona os arquivos no repositório local e faz stage deles
 
 Obs.: Para remover o stage de um arquivo, use "git reset HEAD YOUR-FILE".
 
-\6. Faça commit dos arquivos com stage em seu repositório local.
+5) Faça commit dos arquivos com stage em seu repositório local.
 
 Na maioria das instalações é necessário configurar primeiro o email:
 
@@ -52,11 +52,11 @@ Para confirmar/comprometer (fazer "commit") das mudanças e prepara-las para "up
 
 Obs.: Para remover esse commit e modificar o arquivo, use "git reset --soft HEAD~1", faça o commit e adicione o arquivo novamente.
 
-\7. Copie o endereço do seu repositório git:
+6) Copie o endereço do seu repositório git:
 
 Exemplo: https://github.com/mlucasdasilva/katacoda-scenarios.git
 
-\8. No Terminal, adicione a URL para o repositório remote onde será feito push do seu repositório local.
+7) No Terminal, adicione a URL para o repositório remote onde será feito push do seu repositório local.
 
 Para configurar o repositório remoto no seu diretório local use o comando:
 
@@ -66,7 +66,7 @@ Para verificar a configuração do repositório remoto faça:
 
 `git remote -v`{{execute}}
 
-\9. Faça "push" das alterações no seu repositório local para o GitHub.
+8) Faça "push" das alterações no seu repositório local para o GitHub.
 
 Para realizar o "push" das mudanças feitas no seu repositório local enviando para o repositório remoto e deixar configurado como default "origin main" faça:
 
