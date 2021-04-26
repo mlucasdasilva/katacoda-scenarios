@@ -25,7 +25,7 @@ ADD index.html /usr/share/nginx/html
 EOF`{{execute}}
 
 
-`cat <<EOF >index.html
+`cat <<EOF >/opt/docker/builders/minhaweb/index.html
 <html>
 <head>
 <title>ALO VOCE!</title>
@@ -35,6 +35,7 @@ EOF`{{execute}}
 </body>
 </html>
 EOF`{{execute}}
+
 
 
 3) Para fazer build
