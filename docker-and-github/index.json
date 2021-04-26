@@ -5,7 +5,7 @@
   "time": "15 minutes",
   "details": {
     "steps": [
-    { "title": "Step 1 - Run a container",
+    { "title": "Passo 1 - Executar um container",
       "text": "step1.md"},
     { "title": "Step 2 - Github",
       "text": "step2.md"}
@@ -20,7 +20,7 @@
   },
   "environment": {
     "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+    "uimessage1": "\u001b[32mYour Terminal bash interativo.\r\nPara verificar o servico `ps -ef`\u001b[m\r\n"
   },
   "backend": {
     "imageid": "ubuntu:2004"
