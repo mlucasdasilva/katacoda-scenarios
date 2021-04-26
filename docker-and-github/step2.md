@@ -39,9 +39,27 @@ EOF`{{execute}}
 
 
 
-`cat \<\<EOF >/opt/docker/builders/minhaweb/index.html
+
+
+`cat <<EOF >/opt/docker/builders/minhaweb/index.html
+<html>
+Oi! Bom Dia.
+Oi! Bom Dia.
+Oi! Bom Dia.
+Oi! Bom Dia.
+Oi! Bom Dia.
+Oi! Bom Dia.
+</html>
+EOF`{{execute}}
+
+
+
+
+
+
+`cat \<\<EOF \>/opt/docker/builders/minhaweb/index.html
 \<html>
-<head>
+\<head>
 <title>ALO VOCE!</title>
 </head>
 <body>
