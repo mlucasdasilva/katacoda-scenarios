@@ -11,8 +11,10 @@
       "text": "step2.md"},
     { "title": "Passo 3 - Armazenamento de imagem no docker hub",
       "text": "step3.md"},
-    { "title": "Passo 4 - Github",
-      "text": "step4.md"}
+    { "title": "Passo 4 - Armazenamento dos artefatos e fontes no Github",
+      "text": "step4.md"},
+    { "title": "Passo 5 - Automatizar build no Dockerhub a partir do Github",
+      "text": "step5.md"}
     ],
     "intro": {
       "text": "intro.md",
