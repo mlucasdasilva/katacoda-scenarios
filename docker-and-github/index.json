@@ -1,13 +1,15 @@
 {
-  "title": "Docker Hello World Scenario",
-  "description": "Docker Hello World",
+  "title": "Docker and Github Scenario",
+  "description": "Docker and Github Scenario",
   "difficulty": "beginner",
   "time": "15 minutes",
   "details": {
-    "steps": [{
-      "title": "Step 1 - Run a container",
-      "text": "step1.md"
-    }],
+    "steps": [
+    { "title": "Step 1 - Run a container",
+      "text": "step1.md"},
+    { "title": "Step 2 - Github",
+      "text": "step2.md"}
+    ],
     "intro": {
       "text": "intro.md",
       "credits": ""
