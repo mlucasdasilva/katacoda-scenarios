@@ -20,6 +20,7 @@ Construir uma imagem nginx com um arquivo estático índex.html
 2) Criação de arquivo docker (Dockerfile) utilizado na construção de imagens
 
 
+Crie o arquivo Dockerfile para realizar o build de imagem:
 
 `cat <<EOF >/opt/docker/builders/minhaweb/Dockerfile
 FROM nginx
@@ -27,119 +28,41 @@ ADD index.html /usr/share/nginx/html
 EOF`{{execute}}
 
 
-
-`cat <<EOF >/opt/docker/builders/minhaweb/index.html
-Oi! Bom Dia.
-Oi! Bom Dia.
-Oi! Bom Dia.
-Oi! Bom Dia.
-Oi! Bom Dia.
-Oi! Bom Dia.
-EOF`{{execute}}
-
-
-
-
-
-`cat <<EOF >/opt/docker/builders/minhaweb/index.html
-\<html>
-Oi! Bom Dia.
-Oi! Bom Dia.
-Oi! Bom Dia.
-Oi! Bom Dia.
-Oi! Bom Dia.
-Oi! Bom Dia.
-\</html>
-EOF`{{execute}}
-
-
-
-`cat <<EOF >/opt/docker/builders/minhaweb/index.html
-&#60;html>
-&#60;head>
-&#60;title>ALO VOCE!&#60;/title>
-&#60;/head>
-&#60;body>
-&#60;p> Alo Voce !!!!! Fala aew !!!  &#60;p/>
-&#60;/body>
-&#60;/html>
-EOF`{{execute}}
-
-
-
-`cat <<EOF >/opt/docker/builders/minhaweb/index.html
-<p>
-&#60;html&#62;
-&#60;head&#62;
-&#60;title&#62;ALO VOCE!&#60;/title&#62;
-&#60;/head&#62;
-&#60;body&#62;
-&#60;p&#62; Alo Voce !!!!! Fala aew !!!  &#60;p/&#62;
-&#60;/body&#62;
-&#60;/html&#62;
-</p>
-EOF`{{execute}}
-
-
-<code>
-cat &#60&#60EOF &#62;/opt/docker/builders/minhaweb/index.html
-&#60;html&#62;
-&#60;head&#62;
-&#60;title&#62;ALO VOCE!&#60;/title&#62;
-&#60;/head&#62;
-&#60;body&#62;
-&#60;p&#62; Alo Voce !!!!! Fala aew !!!  &#60;p/&#62;
-&#60;/body&#62;
-&#60;/html&#62;
-EOF
-</code>{{execute}}
-
-
-
-`cat <<EOF >/opt/docker/builders/minhaweb/index.html
-\<html>
-\<head>
-\<title>ALO VOCE!</title>
-\</head>
-\<body>
-\<p> Alo Voce !!!!! Fala aew !!!  <p/>
-\</body>
-\</html>
-EOF`{{execute}}
-
-
+Crie um arquivo de conteúdo index.html que será utilizado na imagem:
 
 `cat <<EOF >/opt/docker/builders/minhaweb/index.html
     <html>
-    <head>
-    <title>ALO VOCE!</title>
-    </head>
-    <body>
-    <p> Alo Voce !!!!! Fala aew !!!  <p/>
-    </body>
+      <head>
+       <title>ALO VOCE!</title>
+      </head>
+      <body>
+        <p> Oi! Bom Dia. <p/>
+        <p> Alo Voce !!!!! Fala aew !!!  <p/>
+        <p> Oi! Bom Dia. <p/>
+        <p> Alo Voce !!!!! Fala aew !!!  <p/>
+        <p> Oi! Bom Dia. <p/>
+        <p> Alo Voce !!!!! Fala aew !!!  <p/>
+        <p> Oi! Bom Dia. <p/>
+        <p> Alo Voce !!!!! Fala aew !!!  <p/>
+        <p> Oi! Bom Dia. <p/>
+        <p> Alo Voce !!!!! Fala aew !!!  <p/>
+      </body>
     </html>
 EOF`{{execute}}
 
 
+Verifique como ficou o arquivo:
 
-`
-cat <<EOF >/opt/docker/builders/minhaweb/index.html
-    <html>
-    <head>
-    <title>ALO VOCE!</title>
-    </head>
-    <body>
-    <p> Alo Voce !!!!! Fala aew !!!  <p/>
-    </body>
-    </html>
-EOF
-`{{execute}}
-
+`cat /opt/docker/builders/minhaweb/index.html`{{execute}}
 
 
 3) Para fazer build
 
-`docker build -t minhaweb .`{{execute}}
+Para fazer o build use o comando abaixo. 
+Note que há um "./" ao final do comando indicando que o diretório de trabalho é o diretório atual.
+É necessário que o arquivo Dockerfile exista no diretório de trabalho do build.
+
+`docker build -t minhaweb ./`{{execute}}
 
 4) Para consultar
 
