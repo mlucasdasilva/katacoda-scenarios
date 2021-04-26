@@ -1,74 +1,61 @@
 Este é o passo 2.
 
-## Tarefa
+## Tarefa: Construir uma imagem nginx com um arquivo estático índex.html
 
-Este é um exemplo de utilização do github
+# Será feito um 'build' de uma imagem docker com nginx
 
-1) Crie um repositório no github
+1) Organizar arquivo em diretórios (imagem se chamara minhaweb)
 
-* [docs.github.com](https://docs.github.com/pt/github/creating-cloning-and-archiving-repositories/creating-a-new-repository) - Como criar um repositório no github. Disponível também em lingua portuguesa.
+`mkdir /opt/docker`{{execute}}
 
-2) Altere o diretório de trabalho atual referente ao seu projeto local. 
+`mkdir /opt/docker/builders`{{execute}}
 
-`mkdir minhaweb`{{execute}}
+`mkdir /opt/docker/builders/minhaweb`{{execute}}
 
-`cd minhaweb`{{execute}}
+`cd /opt/docker/builders/minhaweb`{{execute}}
 
-3) Inicialize o diretório local como um repositório Git.
 
-Vamos utilizar o cliente em interface de linha de comando (CLI) git
+2) Criação de arquivo docker (Dockerfile) utilizado na construção de imagens
 
-Verifique qual a versão de git que está intalado
+`cat <<EOF >/opt/docker/builders/minhaweb/Dockerfile
+FROM nginx
+ADD index.html /usr/share/nginx/html
+EOF`{{execute}}
 
-`git version`{{execute}}
+`cat <<EOF >index.html
+<html>
+<head>
+<title>ALO VOCE!</title>
+</head>
+<body>
+<p> Alo Voce !!!!! Fala aew !!!  <p/>
+</body>
+</html>
+EOF`{{execute}}
 
-Em versão do git mais recente, a partir da 2.28.0, use:
+3) Para fazer build
 
-`git init -b main`{{execute}}
+`docker build -t minhaweb .`{{execute}}
 
-Para versões anteriores a 2.28.0, use:
+4) Para consultar
 
-`git init`{{execute}}
+`docker image ls`{{execute}}
 
-`git checkout -b main`{{execute}}
+5) Para Executar a imagem
 
-4) Adicione os arquivos ao novo repositório local. Isso faz stage deles para o primeiro commit.
+`docker run -d -p 80:80 --name web1  minhaweb`{{execute}}
 
-Este comando abaixo adiciona os arquivos no repositório local e faz stage deles para commit.
+6) Para consultar containers em execução
 
-`git add .`{{execute}}
+`docker ps`{{execute}}
 
-Obs.: Para remover o stage de um arquivo, use "git reset HEAD YOUR-FILE".
+7) Para encerrar use: docker stop <nome do container>
 
-5) Faça commit dos arquivos com stage em seu repositório local.
+`docker stop web1`{{execute}}
 
-Na maioria das instalações é necessário configurar primeiro o email:
+8) Para remover conteiner use: docker rm <nome do container>
 
-`git config --global user.email "you@example.com"`{{execute}}
+`docker rm web1`{{execute}}
 
-Para confirmar/comprometer (fazer "commit") das mudanças e prepara-las para "upload", ou melhor, para um "push" no repository remoto github use o comando:
 
-`git commit -m "First commit"`{{execute}}
-
-Obs.: Para remover esse commit e modificar o arquivo, use "git reset --soft HEAD~1", faça o commit e adicione o arquivo novamente.
-
-6) Copie o endereço do seu repositório git:
-
-Exemplo: https://github.com/mlucasdasilva/katacoda-scenarios.git
-
-7) No Terminal, adicione a URL para o repositório remote onde será feito push do seu repositório local.
-
-Para configurar o repositório remoto no seu diretório local use o comando:
-
-`git remote add origin <REMOTE_URL>`{{execute}}
-
-Para verificar a configuração do repositório remoto faça:
-
-`git remote -v`{{execute}}
-
-8) Faça "push" das alterações no seu repositório local para o GitHub.
-
-Para realizar o "push" das mudanças feitas no seu repositório local enviando para o repositório remoto e deixar configurado como default "origin main" faça:
-
-`git push -u origin main`{{execute}}
 

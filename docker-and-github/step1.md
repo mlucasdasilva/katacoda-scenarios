@@ -1,8 +1,6 @@
 Este é o primeiro passo.
 
-## Tarefa
-
-Este é um exemplo de execução de **command**
+## Tarefa: Execução de comandos básicos docker
 
 `docker run -d -p 80:80 --name minhaweb nginx`{{execute}}
 
