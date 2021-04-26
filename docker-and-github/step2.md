@@ -19,10 +19,24 @@ Construir uma imagem nginx com um arquivo estático índex.html
 
 2) Criação de arquivo docker (Dockerfile) utilizado na construção de imagens
 
+
+
 `cat <<EOF >/opt/docker/builders/minhaweb/Dockerfile
 FROM nginx
 ADD index.html /usr/share/nginx/html
 EOF`{{execute}}
+
+
+
+`cat <<EOF >/opt/docker/builders/minhaweb/index.html
+Oi! Bom Dia.
+Oi! Bom Dia.
+Oi! Bom Dia.
+Oi! Bom Dia.
+Oi! Bom Dia.
+Oi! Bom Dia.
+EOF`{{execute}}
+
 
 
 `cat \<\<EOF >/opt/docker/builders/minhaweb/index.html
