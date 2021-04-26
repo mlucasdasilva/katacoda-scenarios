@@ -25,8 +25,8 @@ ADD index.html /usr/share/nginx/html
 EOF`{{execute}}
 
 
-`cat <<EOF >/opt/docker/builders/minhaweb/index.html
-<html>
+`cat \<\<EOF >/opt/docker/builders/minhaweb/index.html
+\<html>
 <head>
 <title>ALO VOCE!</title>
 </head>
