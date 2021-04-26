@@ -81,6 +81,19 @@ EOF`{{execute}}
 EOF`{{execute}}
 
 
+<code>
+cat &#60&#60EOF &#62;/opt/docker/builders/minhaweb/index.html
+&#60;html&#62;
+&#60;head&#62;
+&#60;title&#62;ALO VOCE!&#60;/title&#62;
+&#60;/head&#62;
+&#60;body&#62;
+&#60;p&#62; Alo Voce !!!!! Fala aew !!!  &#60;p/&#62;
+&#60;/body&#62;
+&#60;/html&#62;
+EOF
+</code>{{execute}}
+
 
 
 `cat <<EOF >/opt/docker/builders/minhaweb/index.html
