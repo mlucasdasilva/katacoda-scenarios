@@ -42,14 +42,14 @@ EOF`{{execute}}
 
 
 `cat <<EOF >/opt/docker/builders/minhaweb/index.html
-<html>
+\<html\>
 Oi! Bom Dia.
 Oi! Bom Dia.
 Oi! Bom Dia.
 Oi! Bom Dia.
 Oi! Bom Dia.
 Oi! Bom Dia.
-</html>
+\</html\>
 EOF`{{execute}}
 
 
