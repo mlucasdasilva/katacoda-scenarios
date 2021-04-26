@@ -54,6 +54,32 @@ EOF`{{execute}}
 
 
 
+`cat <<EOF >/opt/docker/builders/minhaweb/index.html
+&#60;html>
+&#60;head>
+&#60;title>ALO VOCE!&#60;/title>
+&#60;/head>
+&#60;body>
+&#60;p> Alo Voce !!!!! Fala aew !!!  &#60;p/>
+&#60;/body>
+&#60;/html>
+EOF`{{execute}}
+
+
+
+`cat <<EOF >/opt/docker/builders/minhaweb/index.html
+<p>
+&#60;html&#62;
+&#60;head&#62;
+&#60;title&#62;ALO VOCE!&#60;/title&#62;
+&#60;/head&#62;
+&#60;body&#62;
+&#60;p&#62; Alo Voce !!!!! Fala aew !!!  &#60;p/&#62;
+&#60;/body&#62;
+&#60;/html&#62;
+</p>
+EOF`{{execute}}
+
 
 
 
