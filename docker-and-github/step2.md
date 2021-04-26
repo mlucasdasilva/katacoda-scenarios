@@ -26,15 +26,16 @@ EOF`{{execute}}
 
 
 `cat <<EOF >index.html
-\<html>
-\<head>
-\<title>ALO VOCE!</title>
-\</head>
-\<body>
-\<p> Alo Voce !!!!! Fala aew !!!  <p/>
-\</body>
-\</html>
+<html>
+<head>
+<title>ALO VOCE!</title>
+</head>
+<body>
+<p> Alo Voce !!!!! Fala aew !!!  <p/>
+</body>
+</html>
 EOF`{{execute}}
+
 
 3) Para fazer build
 
