@@ -1,0 +1,41 @@
+{
+  "title": "Docker and Github Scenario Version 2",
+  "description": "Docker and Github Scenario  Version 2",
+  "difficulty": "beginner",
+  "time": "15 minutes",
+  "details": {
+    "steps": [
+    { "title": "Passo 1 - Executar um container",
+      "text": "step1.md"},
+    { "title": "Passo 2 - Criação de imagem docker",
+      "text": "step2.md"},
+    { "title": "Passo 3 - Armazenamento de imagem no docker hub",
+      "text": "step3.md"},
+    { "title": "Passo 4 - Armazenamento dos artefatos e fontes no Github",
+      "text": "step4.md"},
+    { "title": "Passo 5 - Automatizar build no Dockerhub a partir do Github",
+      "text": "step5.md"},
+    { "title": "Passo 6 - Extra github",
+      "text": "step6.md"}
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mYour Terminal bash interativo.\r\nPara verificar o servico `ps -ef`\u001b[m\r\n",
+    "uieditorpath": "/root",
+    "hideHiddenFiles": true,
+    "exclusionPatterns": ["*test", "./test/*", "./logs"],
+    "showdashboard": true,
+    "dashboards": [{"name": "Tab Name", "port": 80}, {"name": "Tab Name", "port": 8080}]
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
