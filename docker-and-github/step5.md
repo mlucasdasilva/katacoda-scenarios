@@ -11,6 +11,7 @@ Configurar um build automático DevOps na nuvem (utilizando o CI/CD do docker-hu
 -vincular repositorio do docker-hub ao repositorio do github
 -save and build
 
+Configure a variavel de ambiente com o seu usuário do docker hub:
 
 `export DOCKER_HUB_USER  ; read -p "Digite o seu usuario do docker hub:" DOCKER_HUB_USER`{{execute}}
 

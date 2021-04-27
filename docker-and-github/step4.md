@@ -14,6 +14,7 @@ Faça login na sua conta e crie um repositorio chamado de "minhaweb". Crie como 
 Segue link abaixo com a documentação de criação de repositório no github:
 [docs.github.com](https://docs.github.com/pt/github/creating-cloning-and-archiving-repositories/creating-a-new-repository) - Como criar um repositório no github. Disponível também em lingua portuguesa.
 
+Verifique o endereço correto do seu repositório e configure a variavel de ambiente a seguir:
 
 `export URL_GITHUB  ; read -p "Digite o endereco do novo repositorio criado no github:" URL_GITHUB`{{execute}}
 
