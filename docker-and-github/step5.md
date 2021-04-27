@@ -11,9 +11,28 @@ Configurar um build automático DevOps na nuvem (utilizando o CI/CD do docker-hu
 -vincular repositorio do docker-hub ao repositorio do github
 -save and build
 
+
+`export DOCKER_HUB_USER  ; read -p "Digite o seu usuario do docker hub:" DOCKER_HUB_USER`{{execute}}
+
+`echo $DOCKER_HUB_USER`{{execute}}
+
+
+
 2) Testar build
 
-`docker run --name teste1 --rm -d -p 80:80  <<user-docker-hub>>/<<repositorio>>`
+Execute o comando abaixo para executar um container utilizando o a imagem gerada automaticamente:
+
+`docker run --name teste1 --rm -d -p 80:80 ${DOCKER_HUB_USER}/minhaweb`{{execute}}
+
+Para ver o comando executado:
+
+`echo "COMANDO EXECUATDO: docker run --name teste1 --rm -d -p 80:80 ${DOCKER_HUB_USER}/minhaweb"`{{execute}}
+
+Parar e remover o container:
+
+`docker stop teste1`{{execute}}
+
+`docker rm teste1`{{execute}}
 
 
 3) Provocando um novo build:
@@ -34,18 +53,18 @@ Após alterar o arquivo faça uma nova atualização no github
 
 Acompanhar build no site docker hub
 
+
 4) Testar
 
-docker stop teste1
-docker rm teste1
+`docker rmi ${DOCKER_HUB_USER}/minhaweb`{{execute}}
 
-docker rmi <<user-docker-hub>>/<<repositorio>>
 ou
-docker pull <<user-docker-hub>>/<<repositorio>>
 
-docker run --name teste1 --rm -d -p 80:80  <<user-docker-hub>>/<<repositorio>>
+`docker pull ${DOCKER_HUB_USER}/minhaweb`{{execute}}
 
-Navegue para a sua url local do nginx e veja alteração.
+`docker run --name teste1 --rm -d -p 80:80  ${DOCKER_HUB_USER}/minhaweb`{{execute}}
+
+Navegue acesse no browser na Porta 80 e veja alteração.
 
 
 

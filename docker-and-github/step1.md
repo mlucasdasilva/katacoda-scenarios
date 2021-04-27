@@ -8,7 +8,7 @@ Para executar um conteiner chamado "web1" utilizando a imagem "nginx" que é o n
 
 `docker run -d -p 80:80 --name web1 nginx`{{execute}}
 
-Obs.: Acesse a porta 80 e veja a página default do nginx que está sendo apresentada pelo conteiner.
+Obs.: Acesse a aba "Porta 80" e veja a página default do nginx que está sendo apresentada pelo conteiner.
 
 Para ver os conteineres em execução:
 

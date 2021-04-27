@@ -68,7 +68,7 @@ Note que há um "./" ao final do comando indicando que o diretório de trabalho 
 
 `docker run -d -p 80:80 --name web1 minhaweb-manual`{{execute}}
 
-Acesse a port 80 e veja a página criada no site.
+Acesse a "Porta 80" e veja a página criada no site.
 
 6) Para consultar containers em execução
 
