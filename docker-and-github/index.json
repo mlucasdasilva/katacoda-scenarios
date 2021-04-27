@@ -14,7 +14,9 @@
     { "title": "Passo 4 - Armazenamento dos artefatos e fontes no Github",
       "text": "step4.md"},
     { "title": "Passo 5 - Automatizar build no Dockerhub a partir do Github",
-      "text": "step5.md"}
+      "text": "step5.md"},
+    { "title": "Passo 6 - Extra github",
+      "text": "step6.md"}
     ],
     "intro": {
       "text": "intro.md",
@@ -25,7 +27,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": "editor-terminal",
     "uimessage1": "\u001b[32mYour Terminal bash interativo.\r\nPara verificar o servico `ps -ef`\u001b[m\r\n",
     "uieditorpath": "/root",
     "hideHiddenFiles": true,
