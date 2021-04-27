@@ -2,35 +2,30 @@ Este é o passo 2.
 
 ## Tarefa:
 
-Construir uma imagem nginx com um arquivo estático índex.html
+Construir uma imagem de página web utilizando o software nginx de hospegem e um arquivo estático index.html
 
-# Será feito um 'build' de uma imagem docker com nginx
+# Será feito um 'build' de uma imagem docker utilizando o servidor http nginx
 
-1) Organizar arquivo em diretórios (imagem se chamara minhaweb)
+1) Organizar arquivo em diretórios. Como a imagem se chamará minhaweb-manual, criaremos um sub-diretório com mesmo nome.
 
-`mkdir /opt/docker`{{execute}}
+`mkdir -p /opt/docker/builders/minhaweb-manual`{{execute}}
 
-`mkdir /opt/docker/builders`{{execute}}
-
-`mkdir /opt/docker/builders/minhaweb`{{execute}}
-
-`cd /opt/docker/builders/minhaweb`{{execute}}
+`cd /opt/docker/builders/minhaweb-manual`{{execute}}
 
 
-2) Criação de arquivo docker (Dockerfile) utilizado na construção de imagens
+2) Criação de arquivo docker (Dockerfile) que é necessário em todas as construções ("build") de imagens de conteiner docker
 
+Crie o arquivo Dockerfile para realizar o "build" de imagem, com este comando:
 
-Crie o arquivo Dockerfile para realizar o build de imagem:
-
-`cat <<EOF >/opt/docker/builders/minhaweb/Dockerfile
+`cat <<EOF >/opt/docker/builders/minhaweb-manual/Dockerfile
 FROM nginx
 ADD index.html /usr/share/nginx/html
 EOF`{{execute}}
 
 
-Crie um arquivo de conteúdo index.html que será utilizado na imagem:
+Crie um arquivo de conteúdo index.html que será utilizado na imagem, com este comando:
 
-`cat <<EOF >/opt/docker/builders/minhaweb/index.html
+`cat <<EOF >/opt/docker/builders/minhaweb-manual/index.html
     <html>
       <head>
        <title>ALO VOCE!</title>
@@ -53,7 +48,7 @@ EOF`{{execute}}
 
 Verifique como ficou o arquivo:
 
-`cat /opt/docker/builders/minhaweb/index.html`{{execute}}
+`cat /opt/docker/builders/minhaweb-manual/index.html`{{execute}}
 
 
 3) Para fazer build
@@ -62,15 +57,18 @@ Para fazer o build use o comando abaixo.
 Note que há um "./" ao final do comando indicando que o diretório de trabalho é o diretório atual.
 É necessário que o arquivo Dockerfile exista no diretório de trabalho do build.
 
-`docker build -t minhaweb ./`{{execute}}
+`docker build -t minhaweb-manual ./`{{execute}}
 
-4) Para consultar
+
+4) Para consultar as imagens armazenadas e verificar que existe uma imagem chamada minhaweb-manual:
 
 `docker image ls`{{execute}}
 
 5) Para Executar a imagem
 
-`docker run -d -p 80:80 --name web1  minhaweb`{{execute}}
+`docker run -d -p 80:80 --name web1 minhaweb-manual`{{execute}}
+
+Acesse a port 80 e veja a página criada no site.
 
 6) Para consultar containers em execução
 
@@ -83,6 +81,8 @@ Note que há um "./" ao final do comando indicando que o diretório de trabalho 
 8) Para remover conteiner use: docker rm <nome do container>
 
 `docker rm web1`{{execute}}
+
+Verique que não está mais ativa a porta 80
 
 
 

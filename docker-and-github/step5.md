@@ -2,18 +2,16 @@ Este é o passo 5.
 
 ## Tarefa
 
-Congigurar um build automático DevOps na nuvem (utilizando o CI/CD do docker-hub integrado ao github)
+Configurar um build automático DevOps na nuvem (utilizando o CI/CD do docker-hub integrado ao github)
 
 1) Na url do docker hub você deve:
 
--criar repositorio no docker hub para sua imagem
+-criar repositorio ou utilize o repositório "minhaweb" no docker hub para automatizar os builds de sua imagem
 -conectar docker-hub ao github
 -vincular repositorio do docker-hub ao repositorio do github
 -save and build
 
-
 2) Testar build
-
 
 `docker run --name teste1 --rm -d -p 80:80  <<user-docker-hub>>/<<repositorio>>`
 
@@ -22,13 +20,17 @@ Congigurar um build automático DevOps na nuvem (utilizando o CI/CD do docker-hu
 
 Agora vamos modificar o index.html
 
-cd <diretorio do repositorio git clone>
+`cd /opt/docker/builders/minhaweb`{{execute}}
 
-vi index.html
+Edite e faça altrações no arquivo index.html
 
-git add .
-git commit -m "atualizacao do index.html"
-git push
+Após alterar o arquivo faça uma nova atualização no github
+
+`git add . `{{execute}}
+
+`git commit -m "atualizacao do index.html"`{{execute}}
+
+`git push`{{execute}}
 
 Acompanhar build no site docker hub
 
