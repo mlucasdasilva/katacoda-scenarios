@@ -49,7 +49,7 @@ ou, copie, cole e edite este comando no terminal:
 
 3) Para fazer uso da imagem armazenada
 
-Basta utilizar o nome da sua imagem em qualque computador com docker. Digite o comando abaixo no terminal:
+Basta utilizar o nome da sua imagem em qualquer computador com docker. Digite o comando abaixo no terminal:
 
 `docker rum -it  ....  <sua conta pessoal no docker hub>/minhaweb-manual:0.1`
 
