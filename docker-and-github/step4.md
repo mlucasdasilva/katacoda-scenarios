@@ -1,6 +1,4 @@
-Este é o passo 4.
-
-## Tarefa
+## Tarefa: Utilização do github
 
 Este é um exemplo de utilização do github
 
@@ -11,12 +9,13 @@ Caso ainda não tenha uma conta no github.com você precisará cria-la.
 
 Faça login na sua conta e crie um repositorio chamado de "minhaweb". Crie como público e inicie com arquivos README.md
 
-Segue link abaixo com a documentação de criação de repositório no github:
+Caso queira se aprofundar veja aqui neste link a documentação de criação de repositório no github:
+
 [docs.github.com](https://docs.github.com/pt/github/creating-cloning-and-archiving-repositories/creating-a-new-repository) - Como criar um repositório no github. Disponível também em lingua portuguesa.
 
-Verifique o endereço correto do seu repositório e configure a variavel de ambiente a seguir:
+Verifique o endereço correto do seu repositório no github e configure a variavel de ambiente com os comandos a seguir:
 
-`export URL_GITHUB  ; read -p "Digite o endereco do novo repositorio criado no github:" URL_GITHUB`{{execute}}
+`export URL_GITHUB  ; read -p "Digite o endereco do novo repositorio criado no github: " URL_GITHUB`{{execute}}
 
 `echo $URL_GITHUB`{{execute}}
 

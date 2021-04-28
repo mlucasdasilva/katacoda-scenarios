@@ -1,6 +1,4 @@
-Este é o passo 3.
-
-## Tarefa:
+## Tarefa: Armazenar imagens no docker-hub
 
 Armazenar imagem na nuvem no docker-hub
 
@@ -21,6 +19,11 @@ Criar um alias (tag) para a sua imagem:
 
 `docker tag minhaweb-manual:latest ${DOCKER_HUB_USER}/minhaweb-manual:0.1`{{execute}}
 
+ou, copie, cole e edite este comando no terminal:
+
+`docker tag minhaweb-manual:latest <<coloque aqui ou usuário>>/minhaweb-manual:0.1`{{copy}}
+
+
 Ex.: docker tag minhaweb-manual:latest mlucasdasilva/minhaweb-manual:0.1
 
 Veja que agora possuem duas imagens:
@@ -39,6 +42,10 @@ Fazer upload da sua imagem:
 
 Ex.: docker push mlucasdasilva/minhaweb-manual:0.1
 
+ou, copie, cole e edite este comando no terminal:
+
+`docker push <<coloque aqui ou usuário>>/minhaweb-manual:0.1`{{copy}}
+
 
 3) Para fazer uso da imagem armazenada
 
@@ -46,7 +53,7 @@ Basta utilizar o nome da sua imagem em qualque computador com docker. Digite o c
 
 `docker rum -it  ....  <sua conta pessoal no docker hub>/minhaweb-manual:0.1`
 
-ex: Caso queira testa uma imagem feita por mlucasdasilva:
+ex: Caso queira testar uma imagem feita por mlucasdasilva:
 
 `docker run -d -p 80:80 --name web2 mlucasdasilva/minhaweb-manual:0.2`
 

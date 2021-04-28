@@ -1,6 +1,4 @@
-Este é o primeiro passo.
-
-## Tarefa:
+## Tarefa: Comando docker
 
 Execução de comandos básicos docker
 

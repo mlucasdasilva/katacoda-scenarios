@@ -1,8 +1,12 @@
-Este é o passo 5.
+## Tarefa: Build automático na nuvem
 
-## Tarefa
+Configurar um build automático DevOps na nuvem.
 
-Configurar um build automático DevOps na nuvem (utilizando o CI/CD do docker-hub integrado ao github)
+Para isto utilizaremos a automatização de builds própria do docker-hub integrado ao github.
+
+Isto permite a implementação de um cenário simplificado de CI/CD em container.
+
+CI/CD - Continuous Integration / Continuous Delivery ( Integração Contínua / Entrega Contínua )
 
 1) Na url do docker hub você deve:
 
@@ -13,7 +17,7 @@ Configurar um build automático DevOps na nuvem (utilizando o CI/CD do docker-hu
 
 Configure a variavel de ambiente com o seu usuário do docker hub:
 
-`export DOCKER_HUB_USER  ; read -p "Digite o seu usuario do docker hub:" DOCKER_HUB_USER`{{execute}}
+`export DOCKER_HUB_USER  ; read -p "Digite o seu usuario do docker hub: " DOCKER_HUB_USER`{{execute}}
 
 `echo $DOCKER_HUB_USER`{{execute}}
 
