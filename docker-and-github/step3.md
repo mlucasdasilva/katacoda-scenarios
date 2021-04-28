@@ -8,7 +8,7 @@ Caso ainda não tenha, você deve criar sua conta pessoal no https://hub.docker.
 
 Configure a variavel de ambiente com o seu usuário (conta pessoal) do docker hub:
 
-`export DOCKER_HUB_USER  ; read -p "Digite o seu usuario do docker hub:" DOCKER_HUB_USER`{{execute}}
+`export DOCKER_HUB_USER  ; read -p "Digite o seu usuario do docker hub: " DOCKER_HUB_USER`{{execute}}
 
 `echo $DOCKER_HUB_USER`{{execute}}
 
@@ -21,7 +21,7 @@ Criar um alias (tag) para a sua imagem:
 
 ou, copie, cole e edite este comando no terminal:
 
-`docker tag minhaweb-manual:latest <<coloque aqui ou usuário>>/minhaweb-manual:0.1`{{copy}}
+`docker tag minhaweb-manual:latest <<coloque aqui a conta docker hub>>/minhaweb-manual:0.1`{{copy}}
 
 
 Ex.: docker tag minhaweb-manual:latest mlucasdasilva/minhaweb-manual:0.1
@@ -44,7 +44,7 @@ Ex.: docker push mlucasdasilva/minhaweb-manual:0.1
 
 ou, copie, cole e edite este comando no terminal:
 
-`docker push <<coloque aqui ou usuário>>/minhaweb-manual:0.1`{{copy}}
+`docker push <<coloque aqui a conta docker hub>>/minhaweb-manual:0.1`{{copy}}
 
 
 3) Para fazer uso da imagem armazenada
