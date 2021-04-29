@@ -54,6 +54,12 @@ Para versões anteriores a 2.28.0, use:
 
 `git checkout -b main`{{execute}}
 
+Comentários sobre o comando 'git checkout':
+
+- O git trabalha com o conceito de "branch". Os "branchs" são área de trabalho independentes que permitem que o trabalho colaborativo ocorra de forma organizada.
+- O git trabalha com uma "branch" principal que normalmente é chamada de "master" ou mais recentemente de "main" pelo github.
+- Neste laboratório não nos aprofundaremos neste tema. Caso queira se aprofundar há cursos completos, como por ex. em: https://www.katacoda.com/courses/git
+
 
 4) Adicione os arquivos ao novo repositório local. Isso faz stage deles para o primeiro commit.
 
@@ -77,7 +83,7 @@ Para confirmar/comprometer (fazer "commit") das mudanças e prepara-las para "up
 Obs.: Para remover esse commit e modificar o arquivo, use "git reset --soft HEAD~1", faça o commit e adicione o arquivo novamente.
 
 
-6) Verifique se o endereço do seu repositório git está corretamente configurado:
+6) Verifique se o endereço do seu repositório git está corretamente configurado na variável de ambiente do laboratório:
 
 `echo $URL2_GITHUB`{{execute}}
 
@@ -98,6 +104,11 @@ Para verificar a configuração do repositório remoto faça:
 
 `git remote -v`{{execute}}
 
+Comentários sobre a configuração de repositório remoto:
+
+- No diretório local é possível configurar vários repositórios remotos para sincronização mas normalmente configuramos apenas um.
+- Ao configurar um repositório rmoto nós batizamos com um rótulo/nome local. Normalmente o nome padrão utilizado é "origin".
+- Neste laboratório não nos aprofundaremos neste tema. Caso queira se aprofundar, há cursos completos, como por ex. em: https://www.katacoda.com/courses/git
 
 8) Faça "push" das alterações no seu repositório local para o GitHub.
 

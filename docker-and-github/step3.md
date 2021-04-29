@@ -51,11 +51,11 @@ ou, copie, cole e edite este comando no terminal:
 
 Basta utilizar o nome da sua imagem em qualquer computador com docker. Digite o comando abaixo no terminal:
 
-`docker rum -it  ....  <sua conta pessoal no docker hub>/minhaweb-manual:0.1`
+`docker rum -it  ....  <sua conta pessoal no docker hub>/minhaweb-manual:0.1`{{copy}}
 
-ex: Caso queira testar uma imagem feita por mlucasdasilva:
+ex: Caso queira testar uma imagem armazenada na conta 'mlucasdasilva':
 
-`docker run -d -p 80:80 --name web2 mlucasdasilva/minhaweb-manual:0.2`
+`docker run -d -p 80:80 --name web2 mlucasdasilva/minhaweb-manual:0.2`{{copy}}
 
 4) Para remover os conteineres mesmo que estejam em execução:
 
@@ -63,5 +63,5 @@ ex: Caso queira testar uma imagem feita por mlucasdasilva:
 
 5) Na url do docker hub você pode verificar que exite uma imagem armazenada com o nome de minhaweb-manual
 
-Va para a url https://hub.docker.com/ e busque sua imagem
+Va para a url https://hub.docker.com/ e procure por imagem. Se tudo correu bem estará armazenada lá na sua conta.
 

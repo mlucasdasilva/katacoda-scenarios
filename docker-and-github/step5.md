@@ -8,6 +8,7 @@ Isto permite a implementação de um cenário simplificado de CI/CD em container
 
 CI/CD - Continuous Integration / Continuous Delivery ( Integração Contínua / Entrega Contínua )
 
+
 1) Na url do docker hub você deve:
 
 -criar repositorio ou utilize o repositório "minhaweb" no docker hub para automatizar os builds de sua imagem
@@ -20,7 +21,6 @@ Configure a variavel de ambiente com o seu usuário do docker hub:
 `export DOCKER_HUB_USER  ; read -p "Digite o seu usuario do docker hub: " DOCKER_HUB_USER`{{execute}}
 
 `echo $DOCKER_HUB_USER`{{execute}}
-
 
 
 2) Testar build
@@ -61,15 +61,21 @@ Acompanhar build no site docker hub
 
 4) Testar
 
+Remova a versão anterior de imagem do cache/repositório local ou force a atualização do cache/repositório local de imagens.
+
+Para remover a versão anterior de imagem do cache/repositório local:
+
 `docker rmi ${DOCKER_HUB_USER}/minhaweb`{{execute}}
 
-ou
+ou para forçar a atualização do cache/repositório local de imagens:
 
 `docker pull ${DOCKER_HUB_USER}/minhaweb`{{execute}}
+
+Execute a nova versão de imagem:
 
 `docker run --name teste1 --rm -d -p 80:80  ${DOCKER_HUB_USER}/minhaweb`{{execute}}
 
 Navegue acesse no browser na Porta 80 e veja alteração.
 
-
+Obs: O browser pode apresentar a versão anterior da tela que fica no cache do browser. Tente fazer "refresh" na tela do browser para atualizar.
 
