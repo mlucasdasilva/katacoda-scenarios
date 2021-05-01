@@ -20,8 +20,6 @@
     ],
     "intro": {
       "text": "intro.md",
-      "courseData": "initial-setup.sh",
-      "code": "initial-setup.sh",
       "credits": ""
     },
     "finish": {
