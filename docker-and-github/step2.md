@@ -68,6 +68,8 @@ Note que há um "./" ao final do comando indicando que o diretório de trabalho 
 
 Acesse a "Porta 80" e veja a página criada no site.
 
+Atenção: Normalmente é necesário que faça atualização da página no browser (refresh) para que a nova página apareça.
+
 6) Para consultar containers em execução
 
 `docker ps`{{execute}}
