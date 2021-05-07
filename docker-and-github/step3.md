@@ -55,7 +55,8 @@ Basta utilizar o nome da sua imagem em qualquer computador com docker. Digite o 
 
 ex: Caso queira testar uma imagem armazenada na conta 'mlucasdasilva':
 
-`docker run -d -p 80:80 --name web2 mlucasdasilva/minhaweb-manual:0.2`{{copy}}
+`docker run -d -p 80:80 --name web2 mlucasdasilva/minhaweb-manual:0.1`{{copy}}
+
 
 4) Para remover os conteineres mesmo que estejam em execução:
 

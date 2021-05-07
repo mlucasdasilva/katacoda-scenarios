@@ -78,11 +78,9 @@ Obs.: Para remover esse commit e modificar o arquivo, use "git reset --soft HEAD
 
 6) Faça "push" das alterações no seu repositório local para o GitHub.
 
-Para realizar o "push" das mudanças feitas no seu repositório local enviando para o repositório remoto e deixar configurado como default "origin main" faça:
+Para realizar o "push" das mudanças feitas no seu repositório local enviando para o repositório remoto faça:
 
 `git push`{{execute}}
-
-`git push -u origin main`{{execute}}
 
 
 7) Voce pode verificar na url do github que os arquivo estão lá armazenados.
