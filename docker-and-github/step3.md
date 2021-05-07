@@ -6,6 +6,8 @@ Armazenar imagem na nuvem no docker-hub
 
 Caso ainda não tenha, você deve criar sua conta pessoal no https://hub.docker.com/
 
+Utilizaremos a variável de ambiente `DOCKER_HUB_USER` para facilitar a execução automática dos comandos.
+
 Configure a variavel de ambiente com o seu usuário (conta pessoal) do docker hub:
 
 `export DOCKER_HUB_USER  ; read -p "Digite o seu usuario do docker hub: " DOCKER_HUB_USER`{{execute}}

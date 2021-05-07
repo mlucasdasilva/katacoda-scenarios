@@ -13,6 +13,8 @@ Caso queira se aprofundar veja aqui neste link a documentação de criação de 
 
 [docs.github.com](https://docs.github.com/pt/github/creating-cloning-and-archiving-repositories/creating-a-new-repository) - Como criar um repositório no github. Disponível também em lingua portuguesa.
 
+Utilizaremos a variável de ambiente `URL_GITHUB` para facilitar a execução automática dos comandos.
+
 Verifique o endereço correto do seu repositório no github e configure a variavel de ambiente com os comandos a seguir:
 
 `export URL_GITHUB  ; read -p "Digite o endereco do novo repositorio criado no github: " URL_GITHUB`{{execute}}

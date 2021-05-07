@@ -16,14 +16,18 @@ CI/CD - Continuous Integration / Continuous Delivery ( Integração Contínua / 
 -vincular repositorio do docker-hub ao repositorio do github
 -save and build
 
-Configure a variavel de ambiente com o seu usuário do docker hub:
+Utilizaremos a variável de ambiente `DOCKER_HUB_USER` para facilitar a execução automática dos comandos.
 
-`export DOCKER_HUB_USER  ; read -p "Digite o seu usuario do docker hub: " DOCKER_HUB_USER`{{execute}}
+Esta variavel já foi configurada em passos anteriores. Confira o seu valor com o seguinte comando:
 
 `echo $DOCKER_HUB_USER`{{execute}}
 
+Caso queira reconfigurar a variavel de ambiente com o seu usuário do docker hub, utilize o comando:
 
-2) Testar build
+`export DOCKER_HUB_USER  ; read -p "Digite o seu usuario do docker hub: " DOCKER_HUB_USER`{{execute}}
+
+
+2) Testar que o "build" automático foi realizado com sucesso
 
 Execute o comando abaixo para executar um container utilizando o a imagem gerada automaticamente:
 
@@ -40,13 +44,39 @@ Parar e remover o container:
 `docker rm teste1`{{execute}}
 
 
-3) Provocando um novo build:
+3) Provocando um novo build automátivo:
 
 Agora vamos modificar o index.html
 
 `cd /opt/docker/builders/minhaweb`{{execute}}
 
-Edite e faça altrações no arquivo index.html
+Edite e faça alterações no arquivo index.html
+
+Você pode utilizar os comandos de edição `vi` ou `nano`. 
+
+Ou, por exemplo, com o seguinte comando:
+
+`cat <<EOF >/opt/docker/builders/minhaweb-manual/index.html
+    <html>
+      <head>
+       <title>ALO VOCE!</title>
+      </head>
+      <body>
+        <p> ###### Oi! BOA NOITE ######<p/>
+        <p> Alo Voce !!!!! Fala aew !!!<p/>
+        <p> ###### Oi! BOA NOITE ######<p/>
+        <p> Alo Voce !!!!! Fala aew !!!<p/>
+        <p> ###### Oi! BOA NOITE ######<p/>
+        <p> Alo Voce !!!!! Fala aew !!!<p/>
+        <p> ###### Oi! BOA NOITE ######<p/>
+        <p> Alo Voce !!!!! Fala aew !!!<p/>
+        <p> ###### Oi! BOA NOITE ######<p/>
+        <p> Alo Voce !!!!! Fala aew !!!<p/>
+      </body>
+    </html>
+EOF`{{execute}}
+
+
 
 Após alterar o arquivo faça uma nova atualização no github
 
