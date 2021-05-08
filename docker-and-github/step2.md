@@ -74,15 +74,14 @@ Atenção: Normalmente é necesário que faça atualização da página no brows
 
 `docker ps`{{execute}}
 
-7) Para encerrar use: docker stop <nome do container>
+7) Para encerrar use o comando `docker stop [nome do container]`
 
 `docker stop web1`{{execute}}
 
-8) Para remover conteiner use: docker rm <nome do container>
+8) Para remover conteiner use o comando `docker rm [nome do container]`
 
 `docker rm web1`{{execute}}
 
-Verique que não está mais ativa a porta 80
-
+Verifique que não está mais ativa a porta 80
 
 
