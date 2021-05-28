@@ -11,8 +11,7 @@ Crie um diretorio de trabalho:
 
 
 
-Crie um arquivo contendo o progrma fonte em linguagem C:
-
+Crie um arquivo contendo o programa fonte zombie.c em linguagem C com o conteúdo abaixo:
 
 `
     cat <<EOF >./zombie.c
@@ -36,7 +35,6 @@ Crie um arquivo contendo o progrma fonte em linguagem C:
             }
     }
 EOF`{{execute}}
-
 
 
 Verifique como ficou o arquivo:
