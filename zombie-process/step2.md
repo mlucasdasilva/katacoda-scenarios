@@ -14,7 +14,8 @@ Crie um diretorio de trabalho:
 Crie um arquivo contendo o progrma fonte em linguagem C:
 
 
-`cat <<EOF >./zombie.c
+`
+    cat <<EOF >./zombie.c
     #include <stdio.h>
     #include <stdlib.h>
     int main(void)
