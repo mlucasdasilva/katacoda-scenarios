@@ -5,16 +5,13 @@
 
 Crie um arquivo contendo o progrma fonte em linguagem C:
 
-`cat <<EOF >zombie.c
-#include <stdio.h>
-#include <stdlib.h>
- 
+`cat <<EOF >./zombie.c
+  #include <stdio.h>
+  #include <stdlib.h>
     int main(void)
     {
             pid_t pid;
-
             printf("parent : %d\n", getpid());
-       
             pid = fork();
             if (pid == 0) {
                     printf("child : %d\n", getpid());
@@ -22,7 +19,6 @@ Crie um arquivo contendo o progrma fonte em linguagem C:
                     printf("child exit\n");
                     exit(1);
             }
-  
             /* in parent */
             while (1)
             {
