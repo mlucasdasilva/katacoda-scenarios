@@ -59,4 +59,13 @@ Execute veja o que ocorre:
 
 `./zombie`{{execute}}
 
+Interrompa o processo com ^C
+
+Execute agora em backgroud
+
+`./zombie &`{{execute}}
+
+Veja os processos
+
+`ps -ef`{{execute}}
 
