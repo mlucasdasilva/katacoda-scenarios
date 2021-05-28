@@ -34,7 +34,8 @@ Crie um arquivo contendo o programa fonte zombie.c em linguagem C com o conteúd
                     sleep(1);
             }
     }
-EOF`{{execute}}
+    EOF
+`{{execute}}
 
 
 Verifique como ficou o arquivo:
