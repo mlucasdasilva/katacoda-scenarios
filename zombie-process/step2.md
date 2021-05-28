@@ -3,6 +3,14 @@
 ## Tarefa: Executar processo e testar zombie
 
 
+Crie um diretorio de trabalho:
+
+`mkdir work`{{execute}}
+
+`cd work`{{execute}}
+
+
+
 Crie um arquivo contendo o progrma fonte em linguagem C:
 
 
