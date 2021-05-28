@@ -5,9 +5,10 @@
 
 Crie um arquivo contendo o progrma fonte em linguagem C:
 
+
 `cat <<EOF >./zombie.c
-  #include <stdio.h>
-  #include <stdlib.h>
+    #include <stdio.h>
+    #include <stdlib.h>
     int main(void)
     {
             pid_t pid;
@@ -26,6 +27,7 @@ Crie um arquivo contendo o progrma fonte em linguagem C:
             }
     }
 EOF`{{execute}}
+
 
 
 Verifique como ficou o arquivo:
