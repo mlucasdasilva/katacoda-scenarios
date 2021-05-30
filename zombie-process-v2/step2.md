@@ -67,9 +67,12 @@ Ou, por exemplo, com o seguinte comando:
 EOF`{{execute}}
 
 
-Teste
 
-`cat <<EOF   >zombie.c
+`cat <<EOF >zombie.c
+    \#include <stdio.h>
+    \#include <stdlib.h>
+    int main(void)
+    {
             pid_t pid;
             printf("parent : %d\n", getpid());
             pid = fork();
@@ -82,29 +85,32 @@ Teste
             /* in parent */
             while (1)
             {
-                    sleep(1);
-            }
-    }
-    EOF`{{execute}}
-
-
-
-teste2
-
-`cat <<EOF >zombie.c
-            /* in parent */
-            while (1)
-            {
                 sleep(1);
             }
     }
 EOF`{{execute}}
 
 
-
-teste3
-
 `cat <<EOF >zombie.c
+     #include <stdio.h>
+     #include <stdlib.h>
+    int main(void)
+    {
+            pid_t pid;
+            printf("parent : %d\n", getpid());
+            pid = fork();
+            if (pid == 0) {
+                    printf("child : %d\n", getpid());
+                    sleep(2);
+                    printf("child exit\n");
+                    exit(1);
+            }
+            /* in parent */
+            while (1)
+            {
+                sleep(1);
+            }
+    }
 EOF`{{execute}}
 
 

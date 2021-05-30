@@ -19,7 +19,7 @@ Você pode utilizar os comandos de edição `vi` ou `nano` e copiar o trecho aba
 
 `nano zombie.c`{{copy}}
 
-Copie este trecho no arquivo:
+Copie e cole no arquivo zonmbie.c este trecho abaixo:
 
     #include <stdio.h>
     #include <stdlib.h>
@@ -41,6 +41,8 @@ Copie este trecho no arquivo:
             }
     }
 
+
+Grave o arquivo e saia do editor.
 
 Verifique como ficou o arquivo:
 
