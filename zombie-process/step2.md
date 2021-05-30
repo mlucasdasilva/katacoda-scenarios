@@ -11,10 +11,66 @@ Crie um diretorio de trabalho:
 
 
 
-Crie um arquivo contendo o programa fonte zombie.c em linguagem C com o conteúdo abaixo:
+Crie um arquivo contendo o programa fonte zombie.c em linguagem C.
 
-`
-    cat <<EOF >./zombie.c
+Você pode utilizar os comandos de edição `vi` ou `nano` e copiar o trecho abaixo. 
+
+`vi zombie.c`{{execute}}
+
+`nano zombie.c`{{execute}}
+
+Copie este trecho no arquivo:
+
+´
+    #include <stdio.h>
+    #include <stdlib.h>
+    int main(void)
+    {
+            pid_t pid;
+            printf("parent : %d\n", getpid());
+            pid = fork();
+            if (pid == 0) {
+                    printf("child : %d\n", getpid());
+                    sleep(2);
+                    printf("child exit\n");
+                    exit(1);
+            }
+            /* in parent */
+            while (1)
+            {
+                    sleep(1);
+            }
+    }
+EOF`{{copy}}
+
+
+Ou, por exemplo, com o seguinte comando:
+
+`cat <<EOF >zombie.c
+    #include <stdio.h>
+    #include <stdlib.h>
+    int main(void)
+    {
+            pid_t pid;
+            printf("parent : %d\n", getpid());
+            pid = fork();
+            if (pid == 0) {
+                    printf("child : %d\n", getpid());
+                    sleep(2);
+                    printf("child exit\n");
+                    exit(1);
+            }
+            /* in parent */
+            while (1)
+            {
+                sleep(1);
+            }
+    }
+EOF`{{execute}}
+
+
+
+`cat \<\<EOF >./zombie.c
     #include <stdio.h>
     #include <stdlib.h>
     int main(void)
