@@ -45,8 +45,8 @@ Copie este trecho no arquivo:
 Ou, por exemplo, com o seguinte comando:
 
 `cat <<EOF >zombie.c
-    #include <stdio.h>
-    #include <stdlib.h>
+    include <stdio.h>
+    include <stdlib.h>
     int main(void)
     {
             pid_t pid;
@@ -70,10 +70,6 @@ EOF`{{execute}}
 Teste
 
 `cat <<EOF   >zombie.c
-    #include <stdio.h>
-    #include <stdlib.h>
-    int main(void)
-    {
             pid_t pid;
             printf("parent : %d\n", getpid());
             pid = fork();
