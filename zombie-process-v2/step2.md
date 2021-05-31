@@ -44,9 +44,10 @@ Copie este trecho no arquivo:
 
 Ou, por exemplo, com o seguinte comando:
 
-`cat <<EOF >zombie.c
-    include <stdio.h>
-    include <stdlib.h>
+`
+    cat <<EOF >zombie.c
+    #include <stdio.h>
+    #include <stdlib.h>
     int main(void)
     {
             pid_t pid;
@@ -64,7 +65,8 @@ Ou, por exemplo, com o seguinte comando:
                 sleep(1);
             }
     }
-EOF`{{execute}}
+    EOF
+`{{execute}}
 
 
 
