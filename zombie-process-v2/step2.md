@@ -69,8 +69,8 @@ EOF`{{execute}}
 
 
 `cat <<EOF >zombie.c
-    \#include <stdio.h>
-    \#include <stdlib.h>
+\#include <stdio.h>
+\#include <stdlib.h>
     int main(void)
     {
             pid_t pid;
@@ -92,8 +92,8 @@ EOF`{{execute}}
 
 
 `cat <<EOF >zombie.c
-     #include <stdio.h>
-     #include <stdlib.h>
+ #include <stdio.h>
+ #include <stdlib.h>
     int main(void)
     {
             pid_t pid;
