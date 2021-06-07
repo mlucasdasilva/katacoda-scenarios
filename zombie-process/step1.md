@@ -8,11 +8,11 @@ Para executar um conteiner contendo o compilador da linguagem C , o gcc, utiliz 
 
 
 
-Atualize pacotes e instale editores de texto:
+Atualize pacotes e instale editores de texto no conteiner gcc:
 
 `apt-get update`{{execute}}
 
-`att-get install -y vim`{{execute}}
+`apt-get install -y vim`{{execute}}
 
-`att-get install -y nano`{{execute}}
+`apt-get install -y nano`{{execute}}
 
