@@ -5,9 +5,9 @@
 
 Crie um diretorio de trabalho:
 
-`mkdir work`{{execute}}
+`mkdir ~/work`{{execute}}
 
-`cd work`{{execute}}
+`cd ~/work`{{execute}}
 
 
 

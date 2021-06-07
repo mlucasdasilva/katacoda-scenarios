@@ -28,40 +28,37 @@ Copie e cole no arquivo zonmbie.c este trecho abaixo:
     //
     // The function to be executed by all threads
     //
-    void *myThreadFun(void *vargp)
+    void *myThread(void *vargp)
     {
-    	// Store the value argument passed to this thread
-    	int *myid = (int *)vargp;
-    	// Let us create a static variable to observe its changes
-    	static int s = 0;
-    	// Change static and global variables
-    	++s; ++g;
-    	// Print the argument, static and global variables
-    	printf("Thread ID: %d, Static: %d, Global: %d\n", *myid, ++s, ++g);
-    	// Keep thread running
-    	while (1)
-    	{
-    			sleep(1);
-    	}
+        // Store the value argument passed to this thread
+        int *myid = (int *)vargp;
+        // Change global variable
+        ++g;
+        // Print the argument, static and global variables
+        printf("Thread ID: %d, Global: %d\n", *myid, g);
+        // Keep thread running 10 seconds
+        sleep(10);
+        printf("myThread %d exit\n", *myid);
+        pthread_exit(NULL);
     }
     //
     // Main
     //
     int main()
     {
-    	int i;
-    	pthread_t tid;
-    	// Let us create three threads
-    	for (i = 0; i < 3; i++)
-    		pthread_create(&tid, NULL, myThreadFun, (void *)&tid);
-    	// Keep main running
-    	while (1)
-    	{
-    			sleep(1);
-    	}
-    	// Exit
-    	pthread_exit(NULL);
-    	return 0;
+        int i;
+        pthread_t tid[3];
+        printf("\n");
+        // Let us create three threads
+        for (i = 0; i < 3; i++)
+        {
+            pthread_create(&tid[i], NULL, myThread, (void *)&tid[i]);
+        }
+        // Keep main running 20 seconds
+        sleep(20);
+        // Exit
+        printf("main exit\n");
+        return 0;
     }
 
 
