@@ -1,14 +1,18 @@
 {
-  "title": "Versao Teste - Cenario de Processo Zumbi no Linux",
-  "description": "Versao Teste - Cenario de Processo Zumbi no Linux",
+  "title": "Cenario de Processo Zumbi no Linux",
+  "description": "Cenario de Processo Zumbi no Linux",
   "difficulty": "beginner",
-  "time": "15 minutes",
+  "time": "30 minutos",
   "details": {
     "steps": [
     { "title": "Passo 1 - Executar um container com o gcc",
       "text": "step1.md"},
     { "title": "Passo 2 - Compilar e executar o processo",
-      "text": "step2.md"}
+      "text": "step2.md"},
+    { "title": "Passo 3 - Desafio - alterar e executar o program",
+      "text": "step3.md"},
+    { "title": "Passo 4 - Progrma com threads",
+      "text": "step4.md"}
     ],
     "intro": {
       "text": "intro.md",

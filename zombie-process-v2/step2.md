@@ -15,11 +15,11 @@ Crie um arquivo contendo o programa fonte zombie.c em linguagem C.
 
 Você pode utilizar os comandos de edição `vi` ou `nano` e copiar o trecho abaixo. 
 
-`vi zombie.c`{{execute}}
+`vi zombie.c`{{copy}}
 
-`nano zombie.c`{{execute}}
+`nano zombie.c`{{copy}}
 
-Copie este trecho no arquivo:
+Copie e cole no arquivo zonmbie.c este trecho abaixo:
 
     #include <stdio.h>
     #include <stdlib.h>
@@ -42,77 +42,7 @@ Copie este trecho no arquivo:
     }
 
 
-Ou, por exemplo, com o seguinte comando:
-
-
-`#include <stdio.h>
-    #include <stdlib.h>
-    int main(void)
-    {
-            pid_t pid;
-            printf("parent : %d\n", getpid());
-            pid = fork();
-            if (pid == 0) {
-                    printf("child : %d\n", getpid());
-                    sleep(2);
-                    printf("child exit\n");
-                    exit(1);
-            }
-            /* in parent */
-            while (1)
-            {
-                sleep(1);
-            }
-    }`{{copy}}
-
-
-
-`cat <<EOF >zombie.c
-\#include <stdio.h>
-\#include <stdlib.h>
-    int main(void)
-    {
-            pid_t pid;
-            printf("parent : %d\n", getpid());
-            pid = fork();
-            if (pid == 0) {
-                    printf("child : %d\n", getpid());
-                    sleep(2);
-                    printf("child exit\n");
-                    exit(1);
-            }
-            /* in parent */
-            while (1)
-            {
-                sleep(1);
-            }
-    }
-EOF`{{execute}}
-
-
-`cat <<EOF >zombie.c
- #include <stdio.h>
- #include <stdlib.h>
-    int main(void)
-    {
-            pid_t pid;
-            printf("parent : %d\n", getpid());
-            pid = fork();
-            if (pid == 0) {
-                    printf("child : %d\n", getpid());
-                    sleep(2);
-                    printf("child exit\n");
-                    exit(1);
-            }
-            /* in parent */
-            while (1)
-            {
-                sleep(1);
-            }
-    }
-EOF`{{execute}}
-
-
+Grave o arquivo e saia do editor.
 
 Verifique como ficou o arquivo:
 
