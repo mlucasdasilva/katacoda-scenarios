@@ -73,5 +73,5 @@ Execute agora em backgroud
 
 Veja os processos
 
-`ps -ef`{{execute}}
+`ps -ef --forest`{{execute}}
 
