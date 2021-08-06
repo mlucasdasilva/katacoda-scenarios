@@ -1,0 +1,13 @@
+
+
+Curso git
+https://katacoda.com/courses/git
+
+
+Docker swarm exemplos:
+https://www.katacoda.com/courses/docker-orchestration/getting-started-with-swarm-mode
+
+
+Explica como criar um katacoda:
+https://www.katacoda.com/courses/katacoda/create-first-scenario-git
+

@@ -3,14 +3,14 @@
 
 Inicializar
 
-`docker swarm init`{{execute}}
+`docker swarm init`{{execute T1}}
 
 
 Adiciona segundo node ao cluster
 
-`token=$(ssh -o StrictHostKeyChecking=no [[HOST_IP]] "docker swarm join-token -q worker") && echo $token`{{execute}}
+`token=$(ssh -o StrictHostKeyChecking=no [[HOST_IP]] "docker swarm join-token -q worker") && echo $token`{{execute T2}}
 
-`docker swarm join [[HOST_IP]]:2377 --token $token`{{execute}}
+`docker swarm join [[HOST_IP]]:2377 --token $token`{{execute T2}}
 
 
 
