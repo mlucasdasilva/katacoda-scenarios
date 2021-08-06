@@ -7,16 +7,14 @@
     "steps": [
     { "title": "Passo 1 - Inicialização do cluster swarm",
       "text": "step1.md"},
-    { "title": "Passo 2 - Criação de imagem docker",
+    { "title": "Passo 2 - Comandos simples docker",
       "text": "step2.md"},
-    { "title": "Passo 3 - Armazenamento de imagem no docker hub",
+    { "title": "Passo 3 - Docker-compose",
       "text": "step3.md"},
-    { "title": "Passo 4 - Armazenamento dos artefatos e fontes no Github",
+    { "title": "Passo 4 - Docker Swarm",
       "text": "step4.md"},
-    { "title": "Passo 5 - Automatizar build no Dockerhub a partir do Github",
-      "text": "step5.md"},
-    { "title": "Passo 6 - Extra github",
-      "text": "step6.md"}
+    { "title": "Passo 5 - Sandbox",
+      "text": "step5.md"}
     ],
     "intro": {
       "text": "intro.md",
