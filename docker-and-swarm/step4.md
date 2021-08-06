@@ -2,8 +2,6 @@
 
 Testes de commando do docker swarm
 
-`docker swarm initi --advertise-addr eth0`{{execute}}
-
 `docker node ls`{{execute}}
 
 `docker service create -p 80:80 --name meunginx nginx`{{execute}}

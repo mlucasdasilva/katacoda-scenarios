@@ -7,6 +7,10 @@ Comandos executados no host 1
 
 `docker swarm init`{{execute T1}}
 
+Obs: Algumas vezes é necesário espcificar o ip ou interface da rede que será utilizada para comunicação entre os nós do cluste.
+Ex.: 
+    docker swarm initi --advertise-addr eth0
+
 Adiciona segundo node ao cluster.
 
 Comandos executados no host 2:
