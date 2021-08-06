@@ -5,7 +5,7 @@
   "time": "15-30 minutes",
   "details": {
     "steps": [
-    { "title": "Passo 1 - Inicialização do cluster swarm",
+    { "title": "Passo 1 - Executar um container",
       "text": "step1.md"},
     { "title": "Passo 2 - Criação de imagem docker",
       "text": "step2.md"},
@@ -33,10 +33,7 @@
     "hideHiddenFiles": true,
     "exclusionPatterns": ["*test", "./test/*", "./logs"],
     "showdashboard": true,
-    "dashboards": [{"name": "Porta 80", "port": 80}, {"name": "Porta 10080", "port": 10080}],
-    "terminals": [
-            {"name": "Terminal 2", "target": "host01"},
-            {"name": "Terminal 3", "command": "hostname", "target": "host02"}
+    "dashboards": [{"name": "Porta 80", "port": 80}, {"name": "Porta 10080", "port": 10080}]
   },
   "backend": {
     "imageid": "kubernetes-cluster:1.18"
