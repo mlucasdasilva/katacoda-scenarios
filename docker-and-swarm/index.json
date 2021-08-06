@@ -1,5 +1,5 @@
 {
-  "title": "Docker and Swarm Scenario v3",
+  "title": "Docker and Swarm Scenario v4",
   "description": "Docker, docker-compose and Docker Swarm Scenario",
   "difficulty": "beginner",
   "time": "15-30 minutes",
@@ -40,6 +40,6 @@
     ]
   },
   "backend": {
-    "imageid": "kubernetes-cluster:1.18"
+    "imageid": "swarm"
   }
 }
