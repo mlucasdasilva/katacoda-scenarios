@@ -11,3 +11,10 @@ https://www.katacoda.com/courses/docker-orchestration/getting-started-with-swarm
 Explica como criar um katacoda:
 https://www.katacoda.com/courses/katacoda/create-first-scenario-git
 
+
+Exemplos
+https://github.com/katacoda/scenario-example
+
+Documentacao:
+https://www.katacoda.community/additional-content.html#examples
+
