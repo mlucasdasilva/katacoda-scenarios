@@ -1,5 +1,5 @@
 {
-  "title": "Docker and Swarm Scenario v2",
+  "title": "Docker and Swarm Scenario v3",
   "description": "Docker, docker-compose and Docker Swarm Scenario",
   "difficulty": "beginner",
   "time": "15-30 minutes",
@@ -27,7 +27,7 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
+    "uilayout": "terminal-terminal",
     "uimessage1": "\u001b[32mYour Terminal bash interativo.\r\nPara verificar o servico `ps -ef`\u001b[m\r\n",
     "uieditorpath": "/root",
     "hideHiddenFiles": true,
