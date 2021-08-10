@@ -56,7 +56,7 @@ Você pode utilizar os comandos de edição `vi` ou `nano`.
 
 Ou, por exemplo, com o seguinte comando:
 
-`cat <<EOF >/opt/docker/builders/minhaweb-manual/index.html
+`cat <<EOF >index.html
     <html>
       <head>
        <title>ALO VOCE!</title>
