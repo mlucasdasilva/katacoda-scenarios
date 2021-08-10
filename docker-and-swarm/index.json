@@ -1,6 +1,6 @@
 {
   "title": "Docker and Swarm Scenario",
-  "description": "Docker, docker-compose and Docker Swarm Scenario [v0.0.16]",
+  "description": "Docker, docker-compose and Docker Swarm Scenario [v0.0.17]",
   "difficulty": "beginner",
   "time": "30 minutes",
   "details": {
@@ -27,6 +27,10 @@
     },
     "assets": {
         "host01": [
+            {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+            {"file": "env-init.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+        ],
+        "host02": [
             {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
             {"file": "env-init.sh", "target": "/usr/local/bin/", "chmod": "+x"}
         ]
