@@ -1,8 +1,8 @@
 {
-  "title": "Docker and Github Scenario",
-  "description": "Docker and Github Scenario",
+  "title": "Docker and Github Scenario Version 1",
+  "description": "Docker and Github Scenario  Version 1",
   "difficulty": "beginner",
-  "time": "15-30 minutes",
+  "time": "15 minutes",
   "details": {
     "steps": [
     { "title": "Passo 1 - Executar um container",
@@ -28,12 +28,7 @@
   },
   "environment": {
     "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour Terminal bash interativo.\r\nPara verificar o servico `ps -ef`\u001b[m\r\n",
-    "uieditorpath": "/root",
-    "hideHiddenFiles": true,
-    "exclusionPatterns": ["*test", "./test/*", "./logs"],
-    "showdashboard": true,
-    "dashboards": [{"name": "Porta 80", "port": 80}, {"name": "Porta 10080", "port": 10080}]
+    "uimessage1": "\u001b[32mYour Terminal bash interativo.\r\nPara verificar o servico `ps -ef`\u001b[m\r\n"
   },
   "backend": {
     "imageid": "ubuntu:2004"
