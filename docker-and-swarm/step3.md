@@ -39,7 +39,7 @@ Para consultar o token utilizado na junção de novos nós MANAGERS:
 
 Para promover o host 2 a manager
 
-`docker swarm promote [[HOST2_IP]]`{{execute T1}}
+`docker node promote host02`{{execute T1}}
 
 Veja os nodes ativos no cluster swarm. Note que agora o host 2 consta na coluna de MANAGER STATUS.
 
@@ -47,13 +47,13 @@ Veja os nodes ativos no cluster swarm. Note que agora o host 2 consta na coluna 
 
 Para deixar um node em estado parado (drain). Isto vai encerrar todos os contêineres no modo swarm
 
-`docker node updade [[HOST2_IP]] --availability drain`{{execute T1}}
+`docker node updade host02 --availability drain`{{execute T1}}
 
 Para deixar um node em estado ativo.
 
-`docker node updade [[HOST2_IP]] --availability active`{{execute T1}}
+`docker node updade host02 --availability active`{{execute T1}}
 
 Para rebaixar um node manager para worker
 
-`docker swarm demote [[HOST2_IP]]`{{execute T1}}
+`docker node demote host02`{{execute T1}}
 
