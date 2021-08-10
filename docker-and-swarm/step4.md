@@ -1,5 +1,6 @@
 ## Tarefa: Comandos docker swarm
 
+
 Testes de commando do docker swarm
 
 Verifica situação dos nós do cluster docker swarm:

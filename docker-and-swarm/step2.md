@@ -1,36 +1,35 @@
-## Tarefa: Comandos básicos docker
+## Tarefa: Comandos docker compose
 
 
-Execução de comandos básicos docker
+Testes de aplicação utilizando docker-compose
 
-Para executar um conteiner chamado "web1" utilizando a imagem "nginx" que é o nome curto para "docker.io/library/nginx" que será baixada automaticamente:
 
-`docker run -d -p 80:80 --name web1 nginx`{{execute}}
+`git clone https://github.com/mlucasdasilva/redmine.git`{{execute}}
 
-Obs.: Acesse a aba "Porta 80" e veja a página default do nginx que está sendo apresentada pelo conteiner.
+`cd redmine`{{execute}}
 
-Para ver os conteineres em execução:
+`ls -lsha`{{execute}}
 
-`docker ps`{{execute}}
+`cat docker-compose.yml`{{execute}}
 
-Para ver as imagens baixadas e armazenadas na cache local:
+`docker-compose up -d`{{execute}}
 
-`docker image ls`{{execute}}
-
-Para parar o container:
-
-`docker stop web1`{{execute}}
-
-Para verificar que não está em execução:
+`docker-compose logs `{{execute}}
 
 `docker ps`{{execute}}
 
-Para ver todos (-a , --all) os conteineres incluindo o conteineres parados:
+
+Veja o sistema na porta inidicada pelo arquivo docker-compose.yml (ex.: porta 13000)
+
+`cat docker-compose.yml`{{execute}}
+
+
+Para finalizar (finaliza e remove todos os contêiners deste projeto):
+
+`docker-compose down `{{execute}}
+
+`docker ps`{{execute}}
 
 `docker ps -a`{{execute}}
-
-Para remover o conteiner:
-
-`docker rm web1`{{execute}}
 
 

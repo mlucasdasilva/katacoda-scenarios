@@ -1,32 +1,36 @@
-## Tarefa: Inicializar cluster swarm
+## Tarefa: Comandos básicos docker
 
 
-Inicializar
+Execução de comandos básicos docker
 
-Comandos executados no host 1
+Para executar um conteiner chamado "web1" utilizando a imagem "nginx" que é o nome curto para "docker.io/library/nginx" que será baixada automaticamente:
 
-`docker swarm init`{{execute T1}}
+`docker run -d -p 80:80 --name web1 nginx`{{execute}}
 
-Obs: Algumas vezes é necesário espcificar o ip ou interface da rede que será utilizada para comunicação entre os nós do cluste.
-Ex.: 
-    docker swarm initi --advertise-addr eth0
+Obs.: Acesse a aba "Porta 80" e veja a página default do nginx que está sendo apresentada pelo conteiner.
 
-Adiciona segundo node ao cluster.
+Para ver os conteineres em execução:
 
-Comandos executados no host 2:
+`docker ps`{{execute}}
 
-`token=$(ssh -o StrictHostKeyChecking=no [[HOST_IP]] "docker swarm join-token -q worker") && echo $token`{{execute T2}}
+Para ver as imagens baixadas e armazenadas na cache local:
 
-`docker swarm join [[HOST_IP]]:2377 --token $token`{{execute T2}}
+`docker image ls`{{execute}}
 
-Verificar cluster:
+Para parar o container:
 
-Executa no host1:
+`docker stop web1`{{execute}}
 
-`docker node ls`{{execute T1}}
+Para verificar que não está em execução:
 
-No host2 irá falhar pois não é um gerente do cluster (não é manager):
+`docker ps`{{execute}}
 
-`docker node ls`{{execute T2}}
+Para ver todos (-a , --all) os conteineres incluindo o conteineres parados:
+
+`docker ps -a`{{execute}}
+
+Para remover o conteiner:
+
+`docker rm web1`{{execute}}
 
 
