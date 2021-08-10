@@ -9,7 +9,7 @@ Isto permite a implementação de um cenário simplificado de CI/CD em container
 CI/CD - Continuous Integration / Continuous Delivery ( Integração Contínua / Entrega Contínua )
 
 
-1) Na url do docker hub (no site docker-hub) você deve:
+1) Na url do docker hub (no site docker-hub) você deve configurar manualmente ds seguinte forma:
 
 -Utilizar o repositório "minhaweb" no docker hub para automatizar os builds de sua imagem
 
@@ -29,6 +29,7 @@ Esta variavel já foi configurada em passos anteriores. Confira o seu valor com 
 Caso queira reconfigurar a variavel de ambiente com o seu usuário do docker hub, utilize o comando:
 
 `export DOCKER_HUB_USER  ; read -p "Digite o seu usuario do docker hub: " DOCKER_HUB_USER`{{execute}}
+
 
 
 2) Testar que o "build" automático foi realizado com sucesso
