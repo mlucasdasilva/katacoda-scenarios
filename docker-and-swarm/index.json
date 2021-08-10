@@ -1,6 +1,6 @@
 {
   "title": "Docker and Swarm Scenario",
-  "description": "Docker, docker-compose and Docker Swarm Scenario [v0.0.11]",
+  "description": "Docker, docker-compose and Docker Swarm Scenario [v0.0.12]",
   "difficulty": "beginner",
   "time": "30 minutes",
   "details": {
