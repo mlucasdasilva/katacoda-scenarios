@@ -117,3 +117,6 @@ Navegue acesse no browser na Porta 80 e veja alteração.
 
 Obs: O browser pode apresentar a versão anterior da tela que fica no cache do browser. Tente fazer "refresh" na tela do browser para atualizar.
 
+Para encerrar os testes pare o container (que será removido automaticamente devido a opção --rm utilizada na sua execução)
+
+`docker stop teste1`{{execute}}
