@@ -1,6 +1,4 @@
-Este é o passo 5.
-
-## Tarefa
+## Tarefa: Build automático na nuvem
 
 Configurar um build automático DevOps na nuvem (utilizando o CI/CD do docker-hub integrado ao github)
 

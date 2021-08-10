@@ -1,6 +1,4 @@
-Este é o passo 3.
-
-## Tarefa:
+## Tarefa: Armazenar imagens no docker-hub
 
 Armazenar imagem na nuvem no docker-hub
 

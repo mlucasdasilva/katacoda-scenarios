@@ -1,6 +1,4 @@
-Este é o passo 6.
-
-## Tarefa Extra
+## Tarefa Extra: Criação de repositório github
 
 Este é mais um exemplo de utilização do github. Agora iniciando com um diretório já existente.
 

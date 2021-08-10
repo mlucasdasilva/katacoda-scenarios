@@ -1,6 +1,4 @@
-Este é o passo 2.
-
-## Tarefa:
+## Tarefa: Construir imagens de conteineres
 
 Construir uma imagem de página web utilizando o software nginx de hospegem e um arquivo estático index.html
 
