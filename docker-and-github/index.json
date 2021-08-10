@@ -1,6 +1,6 @@
 {
   "title": "Docker and Github Scenario",
-  "description": "Docker and Github Scenario [v0.0.2]",
+  "description": "Docker and Github Scenario [v0.0.3]",
   "difficulty": "beginner",
   "time": "15-30 minutes",
   "details": {
@@ -26,7 +26,7 @@
     },
     "finish": {
       "text": "finish.md"
-    }
+    },
     "assets": {
         "host01": [
             {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"}

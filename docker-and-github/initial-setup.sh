@@ -1,4 +1,10 @@
-
+#!/bin/bash
+if [[ $(hostname) != "host01" ]]; then
+  exit
+fi
+sleep 5
+echo "done" | sudo tee /root/katacoda-start-finished
+echo "Everything ready..."
 sleep 1
 echo
 echo "This is automatically run when the scenario starts"
