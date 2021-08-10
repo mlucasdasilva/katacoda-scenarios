@@ -1,6 +1,6 @@
 {
-  "title": "Docker and Github Scenario Version 1",
-  "description": "Docker and Github Scenario  Version 1",
+  "title": "Docker and Github Scenario Version 2",
+  "description": "Docker and Github Scenario  Version 2",
   "difficulty": "beginner",
   "time": "15 minutes",
   "details": {
@@ -27,8 +27,13 @@
     }
   },
   "environment": {
-    "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour Terminal bash interativo.\r\nPara verificar o servico `ps -ef`\u001b[m\r\n"
+    "uilayout": "editor-terminal",
+    "uimessage1": "\u001b[32mYour Terminal bash interativo.\r\nPara verificar o servico `ps -ef`\u001b[m\r\n",
+    "uieditorpath": "/root",
+    "hideHiddenFiles": true,
+    "exclusionPatterns": ["*test", "./test/*", "./logs"],
+    "showdashboard": true,
+    "dashboards": [{"name": "Tab Name", "port": 80}, {"name": "Tab Name", "port": 8080}]
   },
   "backend": {
     "imageid": "ubuntu:2004"
