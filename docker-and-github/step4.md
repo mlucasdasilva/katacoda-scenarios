@@ -7,7 +7,7 @@ Este é um exemplo de utilização do github
 Para isto você vai precisar de uma conta no github.com
 Caso ainda não tenha uma conta no github.com você precisará cria-la.
 
-Faça login na sua conta e crie um repositorio chamado de "minhaweb". Crie como público e inicie com arquivos README.md
+Faça login na sua conta e, ATENÇÃO, crie um repositorio CHAMADO DE "minhaweb". Crie como público e inicie com arquivos README.md
 
 Caso queira se aprofundar veja aqui neste link a documentação de criação de repositório no github:
 
