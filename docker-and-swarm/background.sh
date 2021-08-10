@@ -1,4 +1,7 @@
 #!/bin/bash
+if [ ! "$HOSTNAME" = "host01" ]; then
+  exit
+fi
 sleep 5
 echo "done" | sudo tee /root/katacoda-finished
 echo "Everything ready..."
