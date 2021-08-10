@@ -47,11 +47,11 @@ Veja os nodes ativos no cluster swarm. Note que agora o host 2 consta na coluna 
 
 Para deixar um node em estado parado (drain). Isto vai encerrar todos os contêineres no modo swarm
 
-`docker node updade host02 --availability drain`{{execute T1}}
+`docker node update host02 --availability drain`{{execute T1}}
 
 Para deixar um node em estado ativo.
 
-`docker node updade host02 --availability active`{{execute T1}}
+`docker node update host02 --availability active`{{execute T1}}
 
 Para rebaixar um node manager para worker
 
