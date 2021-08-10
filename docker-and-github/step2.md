@@ -66,21 +66,22 @@ Note que há um "./" ao final do comando indicando que o diretório de trabalho 
 
 `docker run -d -p 80:80 --name web1 minhaweb-manual`{{execute}}
 
-Acesse a port 80 e veja a página criada no site.
+Acesse a "Porta 80" e veja a página criada no site.
+
+Atenção: Normalmente é necesário que faça atualização da página no browser (refresh) para que a nova página apareça.
 
 6) Para consultar containers em execução
 
 `docker ps`{{execute}}
 
-7) Para encerrar use: docker stop <nome do container>
+7) Para encerrar use o comando `docker stop [nome do container]`
 
 `docker stop web1`{{execute}}
 
-8) Para remover conteiner use: docker rm <nome do container>
+8) Para remover conteiner use o comando `docker rm [nome do container]`
 
 `docker rm web1`{{execute}}
 
-Verique que não está mais ativa a porta 80
-
+Verifique que não está mais ativa a porta 80
 
 

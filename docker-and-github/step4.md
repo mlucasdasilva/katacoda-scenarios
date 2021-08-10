@@ -13,6 +13,21 @@ Caso queira se aprofundar veja aqui neste link a documentação de criação de 
 
 [docs.github.com](https://docs.github.com/pt/github/creating-cloning-and-archiving-repositories/creating-a-new-repository) - Como criar um repositório no github. Disponível também em lingua portuguesa.
 
+Utilizaremos a variável de ambiente `URL_GITHUB` para facilitar a execução automática dos comandos.
+
+Verifique o endereço correto do seu repositório no github e configure a variavel de ambiente com os comandos a seguir:
+
+`export URL_GITHUB  ; read -p "Digite o endereco do novo repositorio criado no github: " URL_GITHUB`{{execute}}
+
+`echo $URL_GITHUB`{{execute}}
+
+`echo "git ls-remote ${URL_GITHUB}"`{{execute}}
+
+`git ls-remote ${URL_GITHUB}`{{execute}}
+
+Exemplo: `git ls-remote https://github.com/mlucasdasilva/minhaweb.git`
+
+
 2) Incicialize o diretório
 
 Posicione no diretório raiz:
@@ -21,13 +36,14 @@ Posicione no diretório raiz:
 
 Faça um clone do repositório github:
 
-`git clone <<endereço do repositório minhaweb criado no github>>`
+`git clone ${URL_GITHUB}`{{execute}}
+
+`echo "COMANDO: git clone ${URL_GITHUB}"`{{execute}}
 
 Exemplo: `git clone https://github.com/mlucasdasilva/minhaweb.git`
 
 
-
-4) Adicione os arquivos ao novo repositório local. Isso faz stage deles para o primeiro commit.
+3) Adicione os arquivos ao novo repositório local. Isso faz stage deles para o primeiro commit.
 
 Este comando abaixo copia os arquivos do sub-diretório minhaweb-manual para este novo sub-diretório minhaweb:
 
@@ -43,7 +59,8 @@ Este comando abaixo adiciona os arquivos no repositório local e faz stage deles
 
 Obs.: Para remover o stage de um arquivo, use "git reset HEAD YOUR-FILE".
 
-5) Faça commit dos arquivos com stage em seu repositório local.
+
+4) Faça commit dos arquivos com stage em seu repositório local.
 
 Na maioria das instalações é necessário configurar primeiro o email:
 
@@ -55,18 +72,18 @@ Para confirmar/comprometer (fazer "commit") das mudanças e prepara-las para "up
 
 Obs.: Para remover esse commit e modificar o arquivo, use "git reset --soft HEAD~1", faça o commit e adicione o arquivo novamente.
 
-6) Para verificar a configuração do repositório remoto faça:
+
+5) Para verificar a configuração do repositório remoto faça:
 
 `git remote -v`{{execute}}
 
-7) Faça "push" das alterações no seu repositório local para o GitHub.
 
-Para realizar o "push" das mudanças feitas no seu repositório local enviando para o repositório remoto e deixar configurado como default "origin main" faça:
+6) Faça "push" das alterações no seu repositório local para o GitHub.
+
+Para realizar o "push" das mudanças feitas no seu repositório local enviando para o repositório remoto faça:
 
 `git push`{{execute}}
 
-`git push -u origin main`{{execute}}
 
-
-8) Voce pode verificar na url do github que os arquivo estão lá armazenados.
+7) Voce pode verificar na url do github que os arquivo estão lá armazenados.
 

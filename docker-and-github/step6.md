@@ -5,12 +5,28 @@ Este é mais um exemplo de utilização do github. Agora iniciando com um diret�
 1) Crie um repositório no github
 
 Para isto você vai precisar de uma conta no github.com
+
 Caso ainda não tenha uma conta no github.com você precisará cria-la.
 
-Faça login na sua conta e crie um repositorio chamado de "minhaweb-manual". Crie como público e NÃO inicie com arquivos README.md
+Faça login na sua conta e crie um repositorio chamado de "minhaweb-manual" (se prefir pode usar outro nome). Crie como público e NÃO inicie com arquivos README.md
 
-Segue link abaixo com a documentação de criação de repositório no github:
+Se tiver criado errado você pode execluir o repositório e criar novamente atravér do site github.com
+
+Caso queira se aprofundar veja aqui neste link a documentação de criação de repositório no github:
+
 [docs.github.com](https://docs.github.com/pt/github/creating-cloning-and-archiving-repositories/creating-a-new-repository) - Como criar um repositório no github. Disponível também em lingua portuguesa.
+
+Verifique o endereço correto do seu repositório no github.com e configure a variavel de ambiente com os comandos a seguir:
+
+`export URL2_GITHUB  ; read -p "Digite o endereco do novo repositorio criado no github: " URL2_GITHUB`{{execute}}
+
+`echo $URL2_GITHUB`{{execute}}
+
+`echo "git ls-remote ${URL2_GITHUB}"`{{execute}}
+
+`git ls-remote ${URL2_GITHUB}`{{execute}}
+
+Exemplo: `git ls-remote https://github.com/mlucasdasilva/minhaweb-manual.git`
 
 
 2) Posicione no diretório que deseja armazenar no novo repositório github
@@ -38,6 +54,13 @@ Para versões anteriores a 2.28.0, use:
 
 `git checkout -b main`{{execute}}
 
+Comentários sobre o comando 'git checkout':
+
+- O git trabalha com o conceito de "branch". Os "branchs" são área de trabalho independentes que permitem que o trabalho colaborativo ocorra de forma organizada.
+- O git trabalha com uma "branch" principal que normalmente é chamada de "master" ou mais recentemente de "main" pelo github.
+- Neste laboratório não nos aprofundaremos neste tema. Caso queira se aprofundar há cursos completos, como por ex. em: https://www.katacoda.com/courses/git
+
+
 4) Adicione os arquivos ao novo repositório local. Isso faz stage deles para o primeiro commit.
 
 Este comando abaixo adiciona os arquivos no repositório local e faz stage deles para commit.
@@ -45,6 +68,7 @@ Este comando abaixo adiciona os arquivos no repositório local e faz stage deles
 `git add .`{{execute}}
 
 Obs.: Para remover o stage de um arquivo, use "git reset HEAD YOUR-FILE".
+
 
 5) Faça commit dos arquivos com stage em seu repositório local.
 
@@ -58,25 +82,40 @@ Para confirmar/comprometer (fazer "commit") das mudanças e prepara-las para "up
 
 Obs.: Para remover esse commit e modificar o arquivo, use "git reset --soft HEAD~1", faça o commit e adicione o arquivo novamente.
 
-6) Copie o endereço do seu repositório git:
+
+6) Verifique se o endereço do seu repositório git está corretamente configurado na variável de ambiente do laboratório:
+
+`echo $URL2_GITHUB`{{execute}}
 
 Exemplo: https://github.com/mlucasdasilva/minhaweb-manual.git
+
 
 7) No Terminal, adicione a URL para o repositório remote onde será feito push do seu repositório local.
 
 Para configurar o repositório remoto no seu diretório local use o comando:
 
-`git remote add origin <REMOTE_URL>`
+`git remote add origin ${URL2_GITHUB}`{{execute}}
+
+Veja o comando que foi executado:
+
+`echo "COMANDO EXECUTADO: git remote add origin ${URL2_GITHUB}"`{{execute}}
 
 Para verificar a configuração do repositório remoto faça:
 
 `git remote -v`{{execute}}
+
+Comentários sobre a configuração de repositório remoto:
+
+- No diretório local é possível configurar vários repositórios remotos para sincronização mas normalmente configuramos apenas um.
+- Ao configurar um repositório rmoto nós batizamos com um rótulo/nome local. Normalmente o nome padrão utilizado é "origin".
+- Neste laboratório não nos aprofundaremos neste tema. Caso queira se aprofundar, há cursos completos, como por ex. em: https://www.katacoda.com/courses/git
 
 8) Faça "push" das alterações no seu repositório local para o GitHub.
 
 Para realizar o "push" das mudanças feitas no seu repositório local enviando para o repositório remoto e deixar configurado como default "origin main" faça:
 
 `git push -u origin main`{{execute}}
+
 
 9) Voce pode verificar na url do github que os arquivo estão lá armazenados.
 
