@@ -1,14 +1,14 @@
 {
   "title": "Docker and Swarm Scenario",
-  "description": "Docker, docker-compose and Docker Swarm Scenario [v0.0.15]",
+  "description": "Docker, docker-compose and Docker Swarm Scenario [v0.0.16]",
   "difficulty": "beginner",
   "time": "30 minutes",
   "details": {
     "steps": [
     { "title": "Passo 1 - Comandos simples docker",
       "text": "step1.md",
-      "courseData": "background.sh",
-      "code": "foreground.sh"},
+      "background": "background.sh",
+      "foreground": "foreground.sh"},
     { "title": "Passo 2 - Docker-compose",
       "text": "step2.md"},
     { "title": "Passo 3 - Inicialização do cluster swarm",
