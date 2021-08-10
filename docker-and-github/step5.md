@@ -77,8 +77,11 @@ Ou, por exemplo, com o seguinte comando:
 EOF`{{execute}}
 
 
+Após alterar verifique se consta como modificado no git:
 
-Após alterar o arquivo faça uma nova atualização no github
+`git add . `{{execute}}
+
+Estando tudo certo, faça uma nova atualização no repositório remoto github
 
 `git add . `{{execute}}
 
