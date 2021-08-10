@@ -32,4 +32,9 @@ Para remover o conteiner:
 
 `docker rm web1`{{execute}}
 
+Obs: Para remover o conteiner é necessário que o coneiner já esteja parado. Casco queira remover um conteiner mesmo em execução utiliza a opção "-f" como no comando abaixo:
+
+`docker rm -f web1`{{execute}}
+
+
 

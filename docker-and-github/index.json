@@ -6,7 +6,8 @@
   "details": {
     "steps": [
     { "title": "Passo 1 - Executar um container",
-      "text": "step1.md"},
+      "text": "step1.md",
+      "background": "initial-setup.sh"},
     { "title": "Passo 2 - Criação de imagem docker",
       "text": "step2.md"},
     { "title": "Passo 3 - Armazenamento de imagem no docker hub",
