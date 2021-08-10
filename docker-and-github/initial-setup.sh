@@ -10,3 +10,4 @@ echo "Initial Setup OK"
 echo
 sleep 5
 clear
+echo "done" | sudo tee /root/katacoda-initial-setup-finished
