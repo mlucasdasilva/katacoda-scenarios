@@ -6,7 +6,9 @@
   "details": {
     "steps": [
     { "title": "Passo 1 - Comandos simples docker",
-      "text": "step1.md"},
+      "text": "step1.md",
+      "backgroud": "background.sh",
+      "foregroud": "foreground.sh"},
     { "title": "Passo 2 - Docker-compose",
       "text": "step2.md"},
     { "title": "Passo 3 - Inicialização do cluster swarm",
