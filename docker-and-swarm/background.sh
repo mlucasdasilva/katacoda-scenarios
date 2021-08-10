@@ -1,5 +1,5 @@
 #!/bin/bash
-if [ ! "$HOSTNAME" = "host01" ]; then
+if [[ $(hostname) != "host01" ]; then
   exit
 fi
 sleep 5
