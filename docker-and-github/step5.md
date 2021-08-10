@@ -9,12 +9,16 @@ Isto permite a implementação de um cenário simplificado de CI/CD em container
 CI/CD - Continuous Integration / Continuous Delivery ( Integração Contínua / Entrega Contínua )
 
 
-1) Na url do docker hub você deve:
+1) Na url do docker hub (no site docker-hub) você deve:
 
--criar repositorio ou utilize o repositório "minhaweb" no docker hub para automatizar os builds de sua imagem
+-Utilizar o repositório "minhaweb" no docker hub para automatizar os builds de sua imagem
+
 -conectar docker-hub ao github
+
 -vincular repositorio do docker-hub ao repositorio do github
+
 -save and build
+
 
 Utilizaremos a variável de ambiente `DOCKER_HUB_USER` para facilitar a execução automática dos comandos.
 
