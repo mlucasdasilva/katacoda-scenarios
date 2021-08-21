@@ -84,6 +84,19 @@ Para realizar o "push" das mudanças feitas no seu repositório local enviando p
 
 `git push`{{execute}}
 
+ATENÇÃO! O github mudou a forma de autenticação e não permite mais o uso de password neste comando. Você deve criar um "Personal access tokens"
+
+Para criar um Personal access tokens utilize o link: https://github.com/settings/tokens
+
+Ou se preferir, navegando: Clique no seu avatar (normalmente no canto superior a direita); Selecione "Settings", depois "Developer settings" e depois "Personal access token"
+
+Uma vez na tela de "Personal access token" você deve pressionar o botão "Generate new token", selecionar a o box "Repo" e então o botão "Generate token"
+
 
 7) Voce pode verificar na url do github que os arquivo estão lá armazenados.
+
+
+# Atenção, o docker-hub passou a cobrar pela integração com o github. Desta forma vamos encerrar o laboratório neste passo!
+
+
 

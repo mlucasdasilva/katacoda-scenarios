@@ -1,5 +1,11 @@
 ## Tarefa: Build automático na nuvem
 
+
+# Atenção, o docker-hub passou a cobrar pela integração com o github. Desta forma vamos encerrar o laboratório. Pode encerrar neste ponto!
+
+
+
+
 Configurar um build automático DevOps na nuvem.
 
 Para isto utilizaremos a automatização de builds própria do docker-hub integrado ao github.
