@@ -1,8 +1,8 @@
 ## Tarefa: Build automático na nuvem
 
 
-# Atenção, o docker-hub passou a cobrar pela integração com o github. Desta forma vamos encerrar o laboratório neste ponto!
 
+# Atenção, o docker-hub passou a cobrar pela integração com o github. Desta forma vamos encerrar o laboratório neste ponto!
 
 
 
