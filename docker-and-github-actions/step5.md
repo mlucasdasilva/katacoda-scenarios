@@ -165,6 +165,11 @@ Acompanhar build no site git hub (opção actions)
 
 6) Testar
 
+
+Vamos garantir que não haja nenhum conteiner, para remover todos os conteineres, mesmo que estejam em execução, use o comando:
+
+`docker rm -f $(docker ps -a -q)`{{execute}}
+
 Remova a versão anterior de imagem do cache/repositório local ou force a atualização do cache/repositório local de imagens.
 
 Para remover a versão anterior de imagem do cache/repositório local:

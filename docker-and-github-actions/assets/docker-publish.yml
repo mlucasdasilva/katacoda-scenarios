@@ -6,7 +6,7 @@ name: Docker
 # documentation.
 
 on:
-#  # Build periodicaly with schedule
+#  # Build periodicaly with schedule cron
 #  schedule:
 #    - cron: '15 8 * * *'
   push:
@@ -17,10 +17,11 @@ on:
     branches: [ main , master ]
 
 env:
-  # Use docker.io for Docker Hub if empty
+  # The 'docker.io' (docker hub) is used if env variable is empty
+  # We configured two registries, docker hub (docker.io) and github container registry (ghcr.io)
   REGISTRY: ghcr.io
   REGISTRY2: docker.io
-  # github.repository as <account>/<repo>
+  # github.repository as <account>/<repo> will be used as docker image name
   IMAGE_NAME: ${{ github.repository }}
 
 
@@ -36,7 +37,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      # Login against a Docker registry except on PR
+      # Login against a docker registry except on PR
       # https://github.com/docker/login-action
       - name: Log into registry ${{ env.REGISTRY }}
         if: github.event_name != 'pull_request'
@@ -46,7 +47,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Log in to Docker Hub
+      - name: Log in to Docker Hub Registry
+        if: github.event_name != 'pull_request'
         uses: docker/login-action@v1
         with:
           username: ${{ github.actor }}
@@ -61,6 +63,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
           # latest=<auto|true|false>: Handle latest tag (default auto)
+          # latest=true will generate an additional image tag 'latest'
           flavor: |
             latest=true
 
@@ -72,6 +75,7 @@ jobs:
         with:
           images: ${{ env.REGISTRY2 }}/${{ env.IMAGE_NAME }}
           # latest=<auto|true|false>: Handle latest tag (default auto)
+          # latest=true will generate an additional image tag 'latest'
           flavor: |
             latest=true
 
