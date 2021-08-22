@@ -46,19 +46,25 @@ Exemplo: `git clone https://github.com/mlucasdasilva/minhaweb.git`
 
 4) Adicione os arquivos ao novo repositório local. Isso faz stage deles para o primeiro commit.
 
-Este comando abaixo copia os arquivos do sub-diretório minhaweb-manual para este novo sub-diretório minhaweb:
+Estes comandos abaixos fazem você se posicionar no diretorio minhaweb e copia os arquivos do sub-diretório minhaweb-manual para este novo diretório minhaweb:
 
-`cp -pr /opt/docker/builders/minhaweb-manual/* /opt/docker/builders/minhaweb`{{execute}}
+`cd minhaweb`{{execute}}
 
-Se posicione no novo diretório baixado do github:
+`cp -pr /opt/docker/builders/minhaweb-manual/* .`{{execute}}
 
-`cd /opt/docker/builders/minhaweb`{{execute}}
+Este comando abaixo adiciona verifica como o git reconhe os arquivos e qual o seu status no repositório local git.
+
+`git status`{{execute}}
 
 Este comando abaixo adiciona os arquivos no repositório local e faz stage deles para commit.
 
 `git add .`{{execute}}
 
-Obs.: Para remover o stage de um arquivo, use "git reset HEAD YOUR-FILE".
+Obs.: Para remover o stage de um arquivo é utilizado o comando "git reset HEAD YOUR-FILE".
+
+Veja novament o estado dos arquivos no repositório git local.
+
+`git status`{{execute}}
 
 
 5) Faça commit dos arquivos com stage em seu repositório local.
@@ -71,7 +77,7 @@ Para confirmar/comprometer (fazer "commit") das mudanças e prepara-las para "up
 
 `git commit -m "First commit"`{{execute}}
 
-Obs.: Para remover esse commit e modificar o arquivo, use "git reset --soft HEAD~1", faça o commit e adicione o arquivo novamente.
+Obs.: Para remover esse commit e modificar o arquivo é utilzado o comando "git reset --soft HEAD~1", neste caso deverá fazer o commit e adicionar o arquivo novamente.
 
 
 6) Para verificar a configuração do repositório remoto faça:
@@ -85,13 +91,19 @@ Para realizar o "push" das mudanças feitas no seu repositório local enviando p
 
 `git push`{{execute}}
 
-ATENÇÃO! O github mudou a forma de autenticação e não permite mais o uso de password neste comando. Você deve criar um "Personal access tokens"
+ATENÇÃO! O github mudou a forma de autenticação e não permite mais o uso de sua 'password' (senha) pessoal neste comando. Você deve criar um "Personal access tokens"
 
 Para criar um Personal access tokens utilize o link: https://github.com/settings/tokens
 
-Ou se preferir, navegando: Clique no seu avatar (normalmente no canto superior a direita); Selecione "Settings", depois "Developer settings" e depois "Personal access token"
+Ou navegando site github: Clique no seu avatar (normalmente no canto superior a direita); Selecione "Settings", depois "Developer settings" e depois "Personal access token"
 
-Uma vez na tela de "Personal access token" você deve pressionar o botão "Generate new token", selecionar a o box "Repo" e então o botão "Generate token"
+Uma vez na tela de "Personal access token" você deve pressionar o botão "Generate new token", selecionar os boxes "Repo" e "Workflow" , então o botão "Generate token".
+
+Você deve guardar este token para uso futuro.
+
+Você marcou o box "Repo" para ter permissão de atualizar os arquivos dos seus repositórios.
+
+Você marcou o box "Workflow" para ter permissão de realizar as configurações de automatiazação do 'workflow' do 'github actions'. Isto será feito nos próximos passos.
 
 
 8) Voce pode verificar na url do github que os arquivo estão lá armazenados.

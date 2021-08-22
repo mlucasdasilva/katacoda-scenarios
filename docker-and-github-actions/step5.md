@@ -28,13 +28,15 @@ DOCKER_USERNAME
 
 Vamos para o diretório que contém a cópia do repositório github "minhaweb"
 
-`cd /opt/docker/builders/minhaweb`{{execute}}
+`cd /opt/docker/builders`{{execute}}
+
+`cd minhaweb`{{execute}}
 
 Agora vamos adicionar o arquivo de configuração actions no repositório com o seguinte comando:
 
-`mkdir -p /opt/docker/builders/minhaweb/.github/workflows/`{{execute}}
+`mkdir -p .github/workflows/`{{execute}}
 
-`cp /tmp/docker-publish.yml /opt/docker/builders/minhaweb/.github/workflows/`{{execute}}
+`cp /tmp/docker-publish.yml .github/workflows/`{{execute}}
 
 Após adicionar o arquivo verifique se consta como modificado no git:
 
@@ -44,12 +46,27 @@ Estando tudo certo, faça uma nova atualização no repositório remoto github
 
 `git add . `{{execute}}
 
-`git commit -m "atualizacao do index.html"`{{execute}}
+`git status`{{execute}}
+
+`git commit -m "Configuracaoo do workflow do github actions"`{{execute}}
 
 `git push`{{execute}}
 
 Acompanhar build no site git hub (opção actions)
 
+ATENÇÃO! O github mudou a forma de autenticação e não permite mais o uso de sua 'password' (senha) pessoal neste comando. Caso ainda não tenha feito, você deve criar um "Personal access tokens"
+
+Para criar um Personal access tokens utilize o link: https://github.com/settings/tokens
+
+Ou navegando site github: Clique no seu avatar (normalmente no canto superior a direita); Selecione "Settings", depois "Developer settings" e depois "Personal access token"
+
+Uma vez na tela de "Personal access token" você deve pressionar o botão "Generate new token", selecionar os boxes "Repo" e "Workflow" , então o botão "Generate token".
+
+Você deve guardar este token para uso futuro.
+
+Você marcou o box "Repo" para ter permissão de atualizar os arquivos dos seus repositórios.
+
+Você marcou o box "Workflow" para ter permissão de realizar as configurações de automatiazação do 'workflow' do 'github actions'.
 
 
 
@@ -74,9 +91,15 @@ Execute o comando abaixo para executar um container utilizando o a imagem gerada
 
 `docker run --name teste1 --rm -d -p 80:80 ${DOCKER_HUB_USER}/minhaweb`{{execute}}
 
+ou
+
+`docker run --name teste1 --rm -d -p 80:80 ${DOCKER_HUB_USER}/minhaweb:main`{{execute}}
+
+
 Para ver o comando executado:
 
 `echo "COMANDO EXECUATDO: docker run --name teste1 --rm -d -p 80:80 ${DOCKER_HUB_USER}/minhaweb"`{{execute}}
+
 
 Parar e remover o container:
 
@@ -89,6 +112,8 @@ Parar e remover o container:
 5) Provocando um novo build automátivo:
 
 Agora vamos modificar o index.html
+
+Certifique-se que esta no diretório correto:
 
 `cd /opt/docker/builders/minhaweb`{{execute}}
 
@@ -121,11 +146,13 @@ EOF`{{execute}}
 
 Após alterar verifique se consta como modificado no git:
 
-`git add . `{{execute}}
+`git status`{{execute}}
 
 Estando tudo certo, faça uma nova atualização no repositório remoto github
 
 `git add . `{{execute}}
+
+`git status`{{execute}}
 
 `git commit -m "atualizacao do index.html"`{{execute}}
 

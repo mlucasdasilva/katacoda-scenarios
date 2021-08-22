@@ -8,14 +8,16 @@ Construir uma imagem de página web utilizando o software nginx de hospegem e um
 
 `mkdir -p /opt/docker/builders/minhaweb-manual`{{execute}}
 
-`cd /opt/docker/builders/minhaweb-manual`{{execute}}
+`cd /opt/docker/builders`{{execute}}
+
+`cd minhaweb-manual`{{execute}}
 
 
 2) Criação de arquivo docker (Dockerfile) que é necessário em todas as construções ("build") de imagens de conteiner docker
 
 Crie o arquivo Dockerfile para realizar o "build" de imagem, com este comando:
 
-`cat <<EOF >/opt/docker/builders/minhaweb-manual/Dockerfile
+`cat <<EOF >Dockerfile
 FROM nginx
 ADD index.html /usr/share/nginx/html
 EOF`{{execute}}
@@ -46,7 +48,7 @@ EOF`{{execute}}
 
 Verifique como ficou o arquivo:
 
-`cat /opt/docker/builders/minhaweb-manual/index.html`{{execute}}
+`cat index.html`{{execute}}
 
 
 3) Para fazer build
