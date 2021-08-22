@@ -1,8 +1,8 @@
 {
-  "title": "Docker and Github Scenario",
-  "description": "Docker and Github Scenario [v0.0.8]",
+  "title": "Docker and Github Actions Scenario",
+  "description": "Docker and Github Actions Scenario [v0.0.0]",
   "difficulty": "beginner",
-  "time": "15-30 minutes",
+  "time": "20 minutes",
   "details": {
     "steps": [
     { "title": "Passo 1 - Executar um container",
@@ -15,7 +15,7 @@
       "text": "step3.md"},
     { "title": "Passo 4 - Armazenamento dos artefatos e fontes no Github",
       "text": "step4.md"},
-    { "title": "Passo 5 - Automatizar build no Dockerhub a partir do Github",
+    { "title": "Passo 5 - Automatizar build com Github Actions",
       "text": "step5.md"},
     { "title": "Passo 6 - Extra github",
       "text": "step6.md"}
@@ -29,7 +29,8 @@
     },
     "assets": {
         "host01": [
-            {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"}
+            {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+            {"file": "docker-publish.yml", "target": "/tmp/"}
         ]
     }
   },

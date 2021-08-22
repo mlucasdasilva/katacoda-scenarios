@@ -1,32 +1,60 @@
 ## Tarefa: Build automático na nuvem
 
 
+Configurar um build automático DevOps na nuvem. 
 
-### Atenção, o docker-hub passou a cobrar pela integração com o github. Desta forma vamos encerrar o laboratório neste ponto!
+Para isto utilizaremos a automatização de builds própria do Github Actions.
 
+Após build as imagens serão armazenamento nos Registrys do DockerHub (docker.io) e do Github (ghcr.io).
 
-
-Configurar um build automático DevOps na nuvem.
-
-Para isto utilizaremos a automatização de builds própria do docker-hub integrado ao github.
-
-Isto permite a implementação de um cenário simplificado de CI/CD em container.
+Isto permite a implementação de um cenário simplificado de CI/CD utilizando container.
 
 CI/CD - Continuous Integration / Continuous Delivery ( Integração Contínua / Entrega Contínua )
 
 
-1) Na url do docker hub (no site docker-hub) você deve configurar manualmente ds seguinte forma:
+1) Na url do github você deve CONFIGURAR MANUALMENTE o seguinte:
 
--Utilizar o repositório "minhaweb" no docker hub para automatizar os builds de sua imagem
+-Utilizar o repositório "minhaweb" no github para automatizar os builds de sua imagem.
 
--conectar docker-hub ao github
+-Criar duas "secrets" no repositório "minhaweb" para armazenar seu usuário e senha do dockerhub, com os seguintes nomes:
 
--vincular repositorio do docker-hub ao repositorio do github
+DOCKER_PASSWORD
 
--save and build
+DOCKER_USERNAME 
 
 
-Utilizaremos a variável de ambiente `DOCKER_HUB_USER` para facilitar a execução automática dos comandos.
+
+2) Configurando o github actions para o build automático:
+
+Vamos para o diretório que contém a cópia do repositório github "minhaweb"
+
+`cd /opt/docker/builders/minhaweb`{{execute}}
+
+Agora vamos adicionar o arquivo de configuração actions no repositório com o seguinte comando:
+
+`mkdir -p /opt/docker/builders/minhaweb/.github/workflows/`{{execute}}
+
+`cp /tmp/docker-publish.yml /opt/docker/builders/minhaweb/.github/workflows/`{{execute}}
+
+Após adicionar o arquivo verifique se consta como modificado no git:
+
+`git status`{{execute}}
+
+Estando tudo certo, faça uma nova atualização no repositório remoto github
+
+`git add . `{{execute}}
+
+`git commit -m "atualizacao do index.html"`{{execute}}
+
+`git push`{{execute}}
+
+Acompanhar build no site git hub (opção actions)
+
+
+
+
+
+3) Utilizaremos a variável de ambiente `DOCKER_HUB_USER` para facilitar a execução automática dos comandos.
 
 Esta variavel já foi configurada em passos anteriores. Confira o seu valor com o seguinte comando:
 
@@ -38,7 +66,9 @@ Caso queira reconfigurar a variavel de ambiente com o seu usuário do docker hub
 
 
 
-2) Testar que o "build" automático foi realizado com sucesso
+
+
+4) Testar que o "build" automático foi realizado com sucesso
 
 Execute o comando abaixo para executar um container utilizando o a imagem gerada automaticamente:
 
@@ -55,7 +85,8 @@ Parar e remover o container:
 `docker rm teste1`{{execute}}
 
 
-3) Provocando um novo build automátivo:
+
+5) Provocando um novo build automátivo:
 
 Agora vamos modificar o index.html
 
@@ -90,7 +121,7 @@ EOF`{{execute}}
 
 Após alterar verifique se consta como modificado no git:
 
-`git status`{{execute}}
+`git add . `{{execute}}
 
 Estando tudo certo, faça uma nova atualização no repositório remoto github
 
@@ -100,10 +131,12 @@ Estando tudo certo, faça uma nova atualização no repositório remoto github
 
 `git push`{{execute}}
 
-Acompanhar build no site docker hub
+Acompanhar build no site git hub (opção actions)
 
 
-4) Testar
+
+
+6) Testar
 
 Remova a versão anterior de imagem do cache/repositório local ou force a atualização do cache/repositório local de imagens.
 
@@ -126,3 +159,4 @@ Obs: O browser pode apresentar a versão anterior da tela que fica no cache do b
 Para encerrar os testes pare o container (que será removido automaticamente devido a opção --rm utilizada na sua execução)
 
 `docker stop teste1`{{execute}}
+
