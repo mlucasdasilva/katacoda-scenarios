@@ -2,7 +2,7 @@
 
 ## Tarefa: Executar container gcc
 
-Para executar um conteiner contendo o compilador da linguagem C , o gcc, utiliz o comando:
+Para executar um conteiner contendo o compilador da linguagem C , o gcc, utilize o comando:
 
 `docker run -it gcc bash`{{execute}}
 

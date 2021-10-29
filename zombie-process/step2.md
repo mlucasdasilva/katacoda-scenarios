@@ -57,6 +57,8 @@ Para compilar o arquivo fonte faça:
 
 `gcc -o zombie zombie.c`{{execute}}
 
+Obs: Algumas mensagens de "warning" poderão apararecer. Pode ignorar estas mensagens.
+
 Verifique que agora existe o executável chamado zombie:
 
 `ls -lsh`{{execute}}
@@ -73,5 +75,11 @@ Execute agora em backgroud
 
 Veja os processos
 
+`ps -ef`{{execute}}
+
+Veja os processos com as dependências de forma hierárquica.
+
 `ps -ef --forest`{{execute}}
+
+Para finalizar poce pode fazer um `kill -9`{{copy}} utilizando o PID do processo pai ./zombie.
 
