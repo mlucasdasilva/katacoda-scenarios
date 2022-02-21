@@ -58,3 +58,11 @@ Para verificar que a imagens agora está armazenadas no ambiente local (cache lo
 Também é possível remover uma imagem da cache local, por exemplo com o comando abaix. Caso exista imagem com este nome, a imgem será remvida:
 
 `docker rmi mysql:8`{{execute}}
+
+Obs: 
+É possivel que vários nomes de imagem tenham o mesmo IMAGE ID . Neste caso, este nomes podem ser considerados como sinonimos. Na verdade estes nomes são chamados de "tags". Desta forma, para garantir que a imagem seja realmente removida é possível utilizar o comando com o "IMAGE ID" no lugar do nome da imagem e a opção "-f" ou "--force".
+
+`docker rmi -f d1dc36cf8d9e`{{execute}}
+
+
+
