@@ -1,0 +1,34 @@
+{
+  "title": "Cenario de Processo Zumbi no Linux",
+  "description": "Cenario de Processo Zumbi no Linux",
+  "difficulty": "beginner",
+  "time": "30 minutos",
+  "details": {
+    "steps": [
+    { "title": "Passo 1 - Executar um container com o gcc",
+      "text": "step1.md"},
+    { "title": "Passo 2 - Compilar e executar o processo",
+      "text": "step2.md"},
+    { "title": "Passo 3 - Desafio - alterar e executar o program",
+      "text": "step3.md"}
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Terminal bash interativo.\r\nPara verificar o servico `ps -ef`\u001b[m\r\n",
+    "uieditorpath": "/root",
+    "hideHiddenFiles": true,
+    "exclusionPatterns": ["*test", "./test/*", "./logs"],
+    "showdashboard": true
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}

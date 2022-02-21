@@ -1,0 +1,49 @@
+{
+  "title": "Docker and Github Actions Scenario",
+  "description": "Docker and Github Actions Scenario [v0.0.4]",
+  "difficulty": "beginner",
+  "time": "20 minutes",
+  "details": {
+    "steps": [
+    { "title": "Passo 1 - Executar um container",
+      "text": "step1.md",
+      "background": "initial-setup.sh",
+      "foreground": "foreground.sh"},
+    { "title": "Passo 2 - Criação de imagem docker",
+      "text": "step2.md"},
+    { "title": "Passo 3 - Armazenamento de imagem no docker hub",
+      "text": "step3.md"},
+    { "title": "Passo 4 - Armazenamento dos artefatos e fontes no Github",
+      "text": "step4.md"},
+    { "title": "Passo 5 - Automatizar build com Github Actions",
+      "text": "step5.md"},
+    { "title": "Passo 6 - Extra github",
+      "text": "step6.md"}
+    ],
+    "intro": {
+      "text": "intro.md",
+      "credits": ""
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+        "host01": [
+            {"file": "wait.sh", "target": "/usr/local/bin/", "chmod": "+x"},
+            {"file": "docker-publish.yml", "target": "/tmp/"}
+        ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour Terminal bash interativo.\r\nPara verificar o servico `ps -ef`\u001b[m\r\n",
+    "uieditorpath": "/root",
+    "hideHiddenFiles": true,
+    "exclusionPatterns": ["*test", "./test/*", "./logs"],
+    "showdashboard": true,
+    "dashboards": [{"name": "Porta 80", "port": 80}, {"name": "Porta 10080", "port": 10080}]
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  }
+}
