@@ -1,23 +1,40 @@
 
 
-## Executnado a aplicação com rede virtual e banco de dados em conteiner
+
+## Execução da aplicação em conteiner
 
 
-`docker network create network-lab`{{execute}}
+Vamos agora executar uma aplicação em conteiner.
 
-`docker network ls`{{execute}}
+Utilizaremos uma imagem já existente com a aplicação opensource "Redmine". Sua imagem encontra armazenada no "registry":
 
-`docker network inspect network-lab`{{execute}}
+https://hub.docker.com/_/redmine
 
-`docker run -d --name container-mysql --network network-lab -e MYSQL_USER=redmine -e MYSQL_PASSWORD=secret -e MYSQL_DATABASE=redmine -e MYSQL_RANDOM_ROOT_PASSWORD=1 mysql:5.7`{{execute}}
+Executando a aplicação no modo apresentação:
 
-`docker ps`{{execute}}
+`docker run -d -p 80:3000 --name container-redmine redmine`{{execute}}
 
-`docker container inspect container-mysql`{{execute}}
+Verificando que conteiner da aplicação está sendo executado:
 
-`docker logs container-mysql`{{execute}}
+`docker ps `{{execute}}
 
-`docker run -d --name container-redmine -p 80:3000 --network network-lab -e REDMINE_DB_MYSQL=container-mysql -e REDMINE_DB_USERNAME=redmine -e REDMINE_DB_PASSWORD=secret redmine`{{execute}}
 
+Você pode acessar a aplicação utilizando a porta 80. Clique no + e escolha a porta 80 na lista mostrada.
+
+Parando a aplicação:
+
+`docker stop container-redmine`{{execute}}
+
+Verificando:
+
+`docker ps `{{execute}}
+
+Verificando os conteineres parados (todos):
+
+`docker ps -a`{{execute}}
+
+Removendo
+
+`docker rm container-redmine`{{execute}}
 
 

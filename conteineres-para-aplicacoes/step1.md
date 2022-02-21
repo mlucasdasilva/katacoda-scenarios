@@ -1,6 +1,7 @@
 
 
-## Explorando um pouco o servidor docker
+
+## Explorando o servidor docker
 
 O docker é um dos ambinetes de execução de conteineres linux mais conhecidos.
 
@@ -30,19 +31,19 @@ Para checar que não há nenhum conteiner em execução neste momento:
 
 `docker ps`{{execute}}
 
-Vamos agora executar uma aplicação em conteiner.
+Uma aplicação pode ser executada em conteiner a partir de uma imagem configurada, construida e armazenada previamente no "registry".
 
-Para isso, podemos utilizar uma imagem já existente com a aplicação.
+Como exemplo, nos próximos passos utilizaremos uma imagem já criada com uma aplicação.
 
-Utilizaremos como exemplo a aplicação open source "Redmine". Sua imagem encontra armazada no registry:
+Utilizaremos como a aplicação opensource "Redmine". Sua imagem encontra armazada no "registry":
 
 https://hub.docker.com/_/redmine
 
-Para baixar a imagem para a cache local:
+Para baixar a imagem para a cache local utilize o comando:
 
 `docker pull redmine`{{execute}}
 
-ou
+ou, o comando abaixo utilizando a url completa, que corresponde a mesma imagem:
 
 `docker pull docker.io/redmine:latest`{{execute}}
 
@@ -50,28 +51,6 @@ Para verificar que a imagens agora está armazenadas no ambiente local (cache lo
 
 `docker image ls`{{execute}}
 
-Executando a aplicação no modo apresentação:
+Também é possível remover uma imagem da cache local, por exemplo com o comando abaix. Caso exista imagem com este nome, a imgem será remvida:
 
-`docker run -d -p 80:3000 --name container-redmine redmine`{{execute}}
-
-Verificando que conteiner da aplicação está sendo executado:
-
-`docker ps `{{execute}}
-
-Parando a aplicação:
-
-`docker stop container-redmine`{{execute}}
-
-Verificando:
-
-`docker ps `{{execute}}
-
-Verificando os conteineres parados (todos):
-
-`docker ps -a`{{execute}}
-
-Removendo
-
-`docker rm container-redmine`{{execute}}
-
-
+`docker rmi mysql:8`{{execute}}
