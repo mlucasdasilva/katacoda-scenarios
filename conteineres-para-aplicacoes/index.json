@@ -6,11 +6,9 @@
   "details": {
     "steps": [
     { "title": "1 - Comandos de conteiner",
-      "text": "step1.md"}
-    ],
+      "text": "step1.md"},
     { "title": "2 - Aplicacao em conteiner",
-      "text": "step2.md"}
-    ],
+      "text": "step2.md"},
     { "title": "3 - Banco de dados em conteiner",
       "text": "step3.md"}
     ],
