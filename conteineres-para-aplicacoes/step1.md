@@ -11,6 +11,10 @@ Para visualizar se o daemon do serviço docker está em execução:
 
 `service docker status`{{execute}}
 
+Atenção: Para sair do comando acima pode ser necessário que clique no terminal e digite "q" ou "control-C".
+
+`q`{{execute}}
+
 Para verificar as versões do servidor e do cliente docker:
 
 `docker version`{{execute}}

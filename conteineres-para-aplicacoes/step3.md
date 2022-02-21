@@ -35,10 +35,18 @@ E para executar a aplicação redmine em conteiner agora utilizando um banco de 
 
 `docker run -d --name container-redmine -p 80:3000 --network network-lab -e REDMINE_DB_MYSQL=container-mysql -e REDMINE_DB_USERNAME=redmine -e REDMINE_DB_PASSWORD=secret redmine`{{execute}}
 
-Você pode agora acessar a aplicação na porta 80 da mesma forma que fez antes.
+Verifique que agora há 2 conteineres rodando:
 
-Se preferir, você pode também explorar outros comandos.
+`docker ps`{{execute}}
+
+Para visualizar os logs do conteiner da aplicação redmine:
+
+`docker logs container-redmine`{{execute}}
+
+Aguarde um pouco até a aplicação concluir sua inicialização e então poderá acessar a aplicação na porta 80 da mesma forma que fez antes.
+
+Agora, quiser, você pode também explorar os comandos que aprendeu.
 
 Aqui encerramos o cenário!
 
-FIM!
+FIM

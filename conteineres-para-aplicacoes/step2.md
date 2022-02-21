@@ -19,7 +19,7 @@ Verificando que conteiner da aplicação está sendo executado:
 `docker ps `{{execute}}
 
 
-Você pode acessar a aplicação utilizando a porta 80. Clique no + e escolha a porta 80 na lista mostrada.
+Você pode acessar a aplicação utilizando a porta 80. Clique no + e escolha a opção na lista mostrada: "View HTTP port 80 on Host 1".
 
 Parando a aplicação:
 
