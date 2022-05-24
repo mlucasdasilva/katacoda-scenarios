@@ -55,13 +55,23 @@ ou, o comando abaixo utilizando a url completa, que corresponde a mesma imagem:
 Podemos baixar outras imagens:
 
 `docker pull mysql:8`{{execute}}
+
 `docker pull alpine`{{execute}}
+
 `docker pull nginx`{{execute}}
+
+`docker pull redis`{{execute}}
+
 `docker pull ubuntu:20.04`{{execute}}
+
 `docker pull docker.io/library/ubuntu:20.04`{{execute}}
+
 `docker pull centos:centos8`{{execute}}
+
 `docker pull quay.io/centos/centos:8`{{execute}}
+
 `docker pull elasticsearch:8.2.0`{{execute}}
+
 `docker pull docker.elastic.co/elasticsearch/elasticsearch:8.2.0`{{execute}}
 
 Para verificar que as imagens agora estão armazenadas no ambiente local (cache local de imagens):
