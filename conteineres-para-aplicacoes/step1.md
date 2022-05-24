@@ -105,7 +105,7 @@ Note que ainda há uma imagem para o IMAGE ID
 
 Para garantir que a imagem seja realmente removida é possível utilizar o comando com o "IMAGE ID" no lugar do nome/tag da imagem e a opção "-f" ou "--force".
 
-Vamos recriar o sinonimo e verificar como ficou:
+Vamos recriar o sinonimo que foi removido e verificar como ficou:
 
 `docker tag mysql:latest  mysql:8`{{execute}}
 
