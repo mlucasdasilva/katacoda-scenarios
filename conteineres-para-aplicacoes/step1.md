@@ -51,18 +51,67 @@ ou, o comando abaixo utilizando a url completa, que corresponde a mesma imagem:
 
 `docker pull docker.io/redmine:latest`{{execute}}
 
-Para verificar que a imagens agora está armazenadas no ambiente local (cache local de imagens):
+
+Podemos baixar outras imagens:
+
+`docker pull mysql:8`{{execute}}
+`docker pull alpine`{{execute}}
+`docker pull nginx`{{execute}}
+`docker pull ubuntu:20.04`{{execute}}
+`docker pull docker.io/library/ubuntu:20.04`{{execute}}
+`docker pull centos:centos8`{{execute}}
+`docker pull quay.io/centos/centos:8`{{execute}}
+`docker pull elasticsearch:8.2.0`{{execute}}
+`docker pull docker.elastic.co/elasticsearch/elasticsearch:8.2.0`{{execute}}
+
+Para verificar que as imagens agora estão armazenadas no ambiente local (cache local de imagens):
 
 `docker image ls`{{execute}}
 
-Também é possível remover uma imagem da cache local, por exemplo com o comando abaix. Caso exista imagem com este nome, a imgem será remvida:
+Consulta com filtro:
+
+`docker image ls --filter reference="mysql":"8"`{{execute}}
+
+É possivel que vários nomes sejam atríbuidos para uma mesma imagem, ou seja, um mesmo IMAGE ID.
+Agora vamos atribuir o sinonimo (ou tag) "mysql:latest" para a imagem do "mysql:8"
+
+`docker tag mysql:8 mysql:latest`{{execute}}
+
+Veja que o mesmo IMAGE ID se repete em duas linhas. Há dois sinonimos para a mesma imagem. Estes sinonimos também são chamados de "tags".
+
+`docker image ls --filter reference="mysql"`{{execute}}
+
+É possível remover uma imagem da cache local com o comando abaixo. Mas a imagem somente será removida se não houver outros sinonimos (tags):
 
 `docker rmi mysql:8`{{execute}}
 
-Obs: 
-É possivel que vários nomes de imagem tenham o mesmo IMAGE ID . Neste caso, este nomes podem ser considerados como sinonimos. Na verdade estes nomes são chamados de "tags". Desta forma, para garantir que a imagem seja realmente removida é possível utilizar o comando com o "IMAGE ID" no lugar do nome da imagem e a opção "-f" ou "--force".
+Note que ainda há uma imagem para o IMAGE ID
 
-`docker rmi -f d1dc36cf8d9e`{{execute}}
+`docker image ls --filter reference="mysql"`{{execute}}
 
+Para garantir que a imagem seja realmente removida é possível utilizar o comando com o "IMAGE ID" no lugar do nome/tag da imagem e a opção "-f" ou "--force".
 
+Vamos recriar o sinonimo e verificar como ficou:
+
+`docker tag mysql:8 mysql:latest`{{execute}}
+
+`docker image ls --filter reference="mysql"`{{execute}}
+
+Agora vamos remover usando o IMAGE ID
+
+Consultando o IMAGE ID:
+
+`docker image ls --filter reference="mysql":"8" --format "{{.ID}}"`{{execute}}
+
+Atribuindo a variavel IMAGE_ID:
+
+`IMAGE_ID=$( docker image ls --filter reference="mysql":"8" --format "{{.ID}}" )`{{execute}}
+
+Fazendo a remoção da imagem pelo IMAGE ID:
+
+`docker rmi -f $IMAGE_ID`{{execute}}
+
+Veja como ficou:
+
+`docker image ls`{{execute}}
 
