@@ -66,6 +66,10 @@ Podemos baixar outras imagens:
 
 `docker pull docker.io/library/ubuntu:20.04`{{execute}}
 
+`docker pull debian:10`{{execute}}
+
+`docker pull fedora:37`{{execute}}
+
 `docker pull centos:centos8`{{execute}}
 
 `docker pull quay.io/centos/centos:8`{{execute}}
@@ -103,7 +107,7 @@ Para garantir que a imagem seja realmente removida é possível utilizar o coman
 
 Vamos recriar o sinonimo e verificar como ficou:
 
-`docker tag mysql:8 mysql:latest`{{execute}}
+`docker tag mysql:latest  mysql:8`{{execute}}
 
 `docker image ls --filter reference="mysql"`{{execute}}
 
